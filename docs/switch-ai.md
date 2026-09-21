@@ -8,17 +8,15 @@ In *Double Battles*, each slot is evaluated independently:
 * The AI’s first slot evaluates against the player’s first slot  
 * The AI’s second slot evaluates against the player’s second slot 
 
-+5: AI's Pokémon is faster than the player’s and OHKOs it.  
-+4: AI's Pokémon is slower than the player’s and OHKOs it.   
-      (Or AI considers Palafin-Zero)  
-+3: AI's Pokémon is faster than the player's and KOs in <= hits.  
-      (Or AI considers Imposter Ditto)  
-+2: AI's Pokémon is slower than the player's and KOs in < hits.  
-      (Or AI considers Wynaut or Wobbuffet)  
-+1: AI's Pokémon is faster than the player's.  
-  0: Default  
- -1: AI's Pokémon is slower than the player's and is OHKO’d.  
-      (If Imposter Ditto is considered, this check is skipped.)
+| Score | Condition |
+| --- | --- |
+| +5 | AI's Pokémon is faster than the player's and OHKOs it. | 
+| +4 | AI's Pokémon is slower than the player's and OHKOs it. Or AI considers Palafin-Zero. |
+| +3 | AI's Pokémon is faster than the player's and KOs in <= hits. Or AI considers Imposter Ditto. |
+| +2 | AI's Pokémon is slower than the player's and KOs in < hits. Or AI considers Wynaut or Wobbuffet. |
+| +1 | AI's Pokémon is faster than the player's. |
+| 0 | Default |
+| -1 | AI's Pokémon is slower than the player's and is OHKO'd. If Imposter Ditto is considered, this check is skipped. |
 
 If the considered Pokémon is a **Support** and isn’t at -1 Score it gets an *additional +2 score 10% of the time*.
 
