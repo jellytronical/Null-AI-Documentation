@@ -1,4 +1,4 @@
-site_name: Null AI Documentation (Prototype)
+site_name: Null AI Documentation
 theme:
   name: material
   palette:
@@ -9,8 +9,8 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Overview: index.md
-  - Support pokemon: Support pokemon.md
-  - Switch AI: Switch AI.md
-  - Move scoring: Move scoring.md
-  - Q&A: QA.md
+  - Support pokemon: support-pokemon.md
+  - Switch AI: switch-ai.md
+  - Move scoring: move-scoring.md
+  - Q&A: qa.md
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
