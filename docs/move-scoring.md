@@ -9,6 +9,7 @@ The AI also has a basic “useless move” check. For example, it won’t set St
 ## Common scores
 
 | Move | Probability |
+| --- | --- |
 | **Highest damaging move (HDM)** | +6 (75%), +8 (25%) |
 | **Slow kill** (AI kills but is slower than target) | +9 (75%), +11 (25%) |
 | **Fast kill** (AI kills and is faster* than target) | +12 (75%), +14 (25%) |
@@ -43,12 +44,6 @@ There are a few specific damaging moves that do not have their damage rolled nor
   * Else: +11 Score  
 * Else if AI is slower and has Eject Button: +11 Score
 
-### Moves that thaw the user
-If AI is frozen or frostbitten: +12 Score
-
-### Choice AI
-If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
-
 ## Score priority overview
 
 The following provides a high-level overview of how maximum move scores are prioritized within the AI logic. This list is not exhaustive and is only intended to illustrate the general hierarchy and relative score priority of different decision outcomes.
@@ -76,7 +71,7 @@ The following provides a high-level overview of how maximum move scores are prio
 * Status moves  
 * Damaging moves with guaranteed side-effects (doesn’t stack with HDM score)
 
-## Offensive Setup  
+## Offensive setup  
 Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
 
 * If Player is incapacitated: +3 Score (90%)  
@@ -92,7 +87,7 @@ Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth
   * Player has a phazing move and AI is not on last mon  
 * If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)
 
-## Defensive Setup  
+## Defensive setup  
 Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash
 
 * If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  
@@ -111,7 +106,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
     * If Def or Sp. Def is lower than +1: +2 Score  
   * If AI has Stored Power or Body Press: +1 Score (50%)
 
-## Mixed Setup  
+## Mixed setup  
 No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
 Calm Mind, Quiver Dance
 
@@ -123,7 +118,7 @@ If a move boosts **special stats**, the logic is mirrored: it is treated as **De
 
 If the move is *Curse* and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.
 
-## Speed Setup  
+## Speed setup  
 Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot
 
 * If Player has Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  
@@ -162,6 +157,12 @@ Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Win
 ## Move scoring reference
 
 The follow sections outline the scoring assigned to various moves in the game.
+
+### Moves that thaw the user
+If AI is frozen or frostbitten: +12 Score
+
+### Choice AI
+If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
 
 ### Rapid Spin  
 Treated as Speed Setup and additionally:
