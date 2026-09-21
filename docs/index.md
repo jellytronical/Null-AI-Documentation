@@ -10,5 +10,5 @@ Future Sight also starts with a default score of +6.
 
 The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a **-20 score penalty**. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.
 
-
+test
 
