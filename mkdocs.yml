@@ -1,15 +1,15 @@
-site_name: Null AI Docs prototype
+site_name: Null AI Documentation (Prototype)
 theme:
   name: material
   palette:
     - scheme: slate
       primary: red
       accent: green
-  logo: assets/logo.png
+logo: assets/logo.png
 extra_css:
   - stylesheets/extra.css
 nav:
-  - Null AI Overview: index.md
+  - Overview: index.md
   - Support pokemon: Support pokemon.md
   - Switch AI: Switch AI.md
   - Move scoring: Move scoring.md
