@@ -1,5 +1,13 @@
 # Move scoring
 
+The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. 
+
+The rest of this document lists the possible move scores and the scenarios in which they apply. As a general rule, **non-attacking moves default to a score of +6** (tied with the highest-damage move: HDM). Exceptions include Nature Power and Memento. Most moves with guaranteed secondary effects (accounting in Serene Grace boosts) and accuracy above 70 (to avoid edge cases like Zap Cannon in Nuzzle AI) also use the +6 base score and follow the behavior of their corresponding status move (e.g. Mystical Fire is treated like Confide). However, these moves do not receive the +6 bonus and do not follow their corresponding AI (unless explicitly stated otherwise) if they are already functioning as the HDM. 
+
+Future Sight also starts with a default score of +6.
+
+The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a **-20 score penalty**. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.
+
 ## Common scores to be aware of
 
     Highest damaging move (HDM):                           +6 (75%), +8 (25%)  
@@ -20,7 +28,7 @@ There are a few specific damaging moves that do not have their damage rolled nor
 * OHKO moves  
 * Feint, Upper Hand
 
-#### If a damaging move kills
+### If a damaging move kills
 
 * If AI is faster or the move has priority and AI is slower: +6 Score  
 * If AI is slower: +3 Score  
@@ -28,17 +36,17 @@ There are a few specific damaging moves that do not have their damage rolled nor
   * The following moves receive a kill bonus, despite never being considered as HDM: Meteor Beam, Future Sight.  
 * If AI has Moxie, Beast Boost, Chilling Neigh, or Grim Neigh: +1 Score
 
-#### Damaging priority moves (Feint excluded)
+### Damaging priority moves (Feint excluded)
 
 * If AI is slower and Player can faint AI:  
   * If the priority move is also HDM: +5 Score  
   * Else: +11 Score  
 * Else if AI is slower and has Eject Button: +11 Score
 
-#### Moves that thaw the user
+### Moves that thaw the user
 If AI is frozen or frostbitten: +12 Score
 
-#### Choice AI
+### Choice AI
 If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
 
 ## Score priority overview
@@ -68,9 +76,7 @@ The following provides a high-level overview of how maximum move scores are prio
 * Status moves  
 * Damaging moves with guaranteed side-effects (doesn’t stack with HDM score)
 
-***General:***
-
-### Offensive Setup  
+## Offensive Setup  
 Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
 
 * If Player is incapacitated: +3 Score (90%)  
@@ -86,7 +92,7 @@ Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth
   * Player has a phazing move and AI is not on last mon  
 * If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)
 
-### Defensive Setup  
+## Defensive Setup  
 Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash
 
 * If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  
@@ -105,7 +111,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
     * If Def or Sp. Def is lower than +1: +2 Score  
   * If AI has Stored Power or Body Press: +1 Score (50%)
 
-### Mixed Setup  
+## Mixed Setup  
 No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
 Calm Mind, Quiver Dance
 
@@ -117,12 +123,45 @@ If a move boosts **special stats**, the logic is mirrored: it is treated as **De
 
 If the move is *Curse* and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.
 
-### Speed Setup  
+## Speed Setup  
 Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot
 
 * If Player has Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  
 * If AI is faster: -20 Score  
 * If AI is slower: +1 Score (80%)
+
+## Should AI Recover function  
+* **Recovery %:**  
+    * Standard recovery moves (Recover, Slack Off, Heal Order, Roost, Strength Sap): 50%  
+    * Weather-based recovery moves (Morning Sun, Synthesis, Moonlight): 67%  
+    * Rest: 100%
+
+* If AI mon is Toxic'd and move isn’t Rest:  
+    * Returns False  
+* If player mon does as much or more damage than would be healed off:  
+    * Returns False  
+    * *Note that this calculation uses the Recovery % listed above.*
+
+* If AI is faster:  
+    * If player mon can kill AI mon, but cannot after AI mon uses recovery move:  
+        * Returns True  
+    * If player mon cannot kill AI mon:  
+        * If AI mon is below 66% and above 40%:  
+            * Returns True (50%), Returns False (50%)  
+        * If AI mon is below 40%:  
+            * Returns True
+
+* If AI is slower:  
+    * If AI is below 70% HP:  
+        * Returns True (75%), Returns False (25%)  
+    * If AI is below 50% HP:  
+        * Returns True  
+          
+* If none of the above cases are true, then this function defaults to return False.
+
+## Move scoring reference
+
+The follow sections outline the scoring assigned to various moves in the game.
 
 ### Rapid Spin  
 Treated as Speed Setup and additionally:
@@ -742,36 +781,3 @@ If the AI is slower and its partner selects Round:
 * The slower user receives a +13 score bonus.
 
 > **Warning:** If the slower Round user is in Slot 1, it cannot yet know whether Slot 2 will choose Round, since Slot 2 has not performed its calculations yet. To compensate for this limitation, the previously mentioned score override is applied instead.
-
----
-
-## Extra Details  
-
-### Should AI Recover function  
-* **Recovery %:**  
-    * Standard recovery moves (Recover, Slack Off, Heal Order, Roost, Strength Sap): 50%  
-    * Weather-based recovery moves (Morning Sun, Synthesis, Moonlight): 67%  
-    * Rest: 100%
-
-* If AI mon is Toxic'd and move isn’t Rest:  
-    * Returns False  
-* If player mon does as much or more damage than would be healed off:  
-    * Returns False  
-    * *Note that this calculation uses the Recovery % listed above.*
-
-* If AI is faster:  
-    * If player mon can kill AI mon, but cannot after AI mon uses recovery move:  
-        * Returns True  
-    * If player mon cannot kill AI mon:  
-        * If AI mon is below 66% and above 40%:  
-            * Returns True (50%), Returns False (50%)  
-        * If AI mon is below 40%:  
-            * Returns True
-
-* If AI is slower:  
-    * If AI is below 70% HP:  
-        * Returns True (75%), Returns False (25%)  
-    * If AI is below 50% HP:  
-        * Returns True  
-          
-* If none of the above cases are true, then this function defaults to return False.
