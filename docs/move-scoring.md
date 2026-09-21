@@ -9,7 +9,6 @@ The AI also has a basic “useless move” check. For example, it won’t set St
 ## Common scores
 
 | Move | Probability |
-| :--- | :--- | :--- |
 | **Highest damaging move (HDM)** | +6 (75%), +8 (25%) |
 | **Slow kill** (AI kills but is slower than target) | +9 (75%), +11 (25%) |
 | **Fast kill** (AI kills and is faster* than target) | +12 (75%), +14 (25%) |
