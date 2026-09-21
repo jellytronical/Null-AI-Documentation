@@ -2,20 +2,21 @@
 
 The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. 
 
-The rest of this document lists the possible move scores and the scenarios in which they apply. As a general rule, **non-attacking moves default to a score of +6** (tied with the highest-damage move: HDM). Exceptions include Nature Power and Memento. Most moves with guaranteed secondary effects (accounting in Serene Grace boosts) and accuracy above 70 (to avoid edge cases like Zap Cannon in Nuzzle AI) also use the +6 base score and follow the behavior of their corresponding status move (e.g. Mystical Fire is treated like Confide). However, these moves do not receive the +6 bonus and do not follow their corresponding AI (unless explicitly stated otherwise) if they are already functioning as the HDM. 
-
-Future Sight also starts with a default score of +6.
+The rest of this document lists the possible move scores and the scenarios in which they apply. As a general rule, **non-attacking moves default to a score of +6**, tied with the highest-damage move (HDM). Exceptions include Nature Power and Memento. Most moves with guaranteed secondary effects (accounting for Serene Grace boosts) and accuracy above 70 (to avoid edge cases like Zap Cannon in Nuzzle AI) also use the +6 base score and follow the behavior of their corresponding status move (e.g. Mystical Fire is treated like Confide). However, these moves do not receive the +6 bonus and do not follow their corresponding AI (unless explicitly stated otherwise) if they are already functioning as the HDM. Future Sight also starts with a default score of +6.
 
 The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a **-20 score penalty**. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.
 
-## Common scores to be aware of
+## Common scores
 
-    Highest damaging move (HDM):                           +6 (75%), +8 (25%)  
-    Slow kill (AI kills but is slower than target): 	+9 (75%), +11 (25%)  
-    Fast kill (AI kills and is faster* than target): 	+12 (75%), +14 (25%)  
-*AI sees speed ties as being faster than the player and priority move kill counts as fast kill
+| Move | Probability |
+| :--- | :--- | :--- |
+| **Highest damaging move (HDM)** | +6 (75%), +8 (25%) |
+| **Slow kill** (AI kills but is slower than target) | +9 (75%), +11 (25%) |
+| **Fast kill** (AI kills and is faster* than target) | +12 (75%), +14 (25%) |
 
-## Damaging Moves
+*AI sees speed ties as being faster than the player and priority move kill counts as a fast kill.
+
+## Damaging moves
 
 AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: +6 (75%), +8 (25%)  
 If multiple moves kill, then they are all considered HDM and all get this score.  
