@@ -1,10 +1,13 @@
 # Q&A
 
-* **Q: How does AI see multi-hit moves?**  
-  **A:** AI usually sees 3 hits for both itself or Player. If the Pokémon has Loaded Dice or Skill Link, it’s 4 hits and 5 hits respectively.
+!!! question "How does AI see multi-hit moves?"
+
+    AI usually sees 3 hits for both itself or Player. If the Pokémon has Loaded Dice or Skill Link, it’s 4 hits and 5 hits respectively.
+
 
 * **Q: How does AI calc Analytic and Payback?**  
   **A:** The AI calculates both Pokémons speed stats and predicts whether Analytic or Payback would apply or not. This does not apply to Avalanche.
+
 
 * **Q: Does AI understand the Players priority moves?**  
   **A:** No, the AI can only make decisions based on the dynamic speed stats of the Pokémon.
