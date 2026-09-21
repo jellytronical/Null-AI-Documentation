@@ -5,7 +5,7 @@ theme:
     - scheme: slate
       primary: red
       accent: green
-  logo: assets/logo.png
+  logo: ./assets/logo.png
 extra_css:
   - stylesheets/extra.css
 nav:
