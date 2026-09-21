@@ -1,0 +1,19 @@
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #1a0808;
+  --md-default-bg-color--light: #240c0c;
+  --md-default-fg-color: #e0e0e0 !important;
+  --md-default-fg-color--light: #b0b0b0 !important;
+  --md-accent-fg-color: #00ff66;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="red"] {
+  --md-primary-fg-color: #5c0606 !important;
+  --md-primary-fg-color--light: #7a0909 !important;
+}
+
+/* Apply neon green and bold styling to both the main nav and the in-page table of contents active items */
+[data-md-color-scheme="slate"] .md-nav__list .md-nav__item--active > .md-nav__link,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link--active {
+  color: #00ff66 !important;
+  font-weight: bold;
+}
