@@ -1,0 +1,3954 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jellytronical.github.io/Null-AI-Documentation/Move%20scoring/">
+      
+      
+        <link rel="prev" href="../Switch%20AI/">
+      
+      
+        <link rel="next" href="../QA/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Move scoring - Null AI Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#move-scoring" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Null AI Documentation" class="md-header__button md-logo" aria-label="Null AI Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Null AI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Move scoring
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Null AI Documentation" class="md-nav__button md-logo" aria-label="Null AI Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Null AI Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Null AI Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Support%20pokemon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support pokemon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Switch%20AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Move scoring
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Move scoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-scores-to-be-aware-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common scores to be aware of
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damaging-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damaging Moves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damaging Moves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-a-damaging-move-kills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If a damaging move kills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damaging-priority-moves-feint-excluded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damaging priority moves (Feint excluded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moves-that-thaw-the-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moves that thaw the user
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-priority-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Score priority overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Score priority overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offensive-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offensive Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defensive-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defensive Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mixed-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rapid-spin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rapid Spin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order Up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evasion-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evasion Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geomancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geomancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-smash-belly-drum-filet-away-clangorous-soul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Smash, Belly Drum, Filet Away, Clangorous Soul
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acupressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acupressure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defense-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense Curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockpile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockpile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fell-stinger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fell Stinger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meteor-beam-electro-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meteor Beam, Electro Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleep-sing-dark-void-yawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleep (Sing, Dark Void, Yawn)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poison-poison-gas-toxic-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Poison (Poison Gas, Toxic, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paralysis-nuzzle-thunder-wave-glare-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paralysis (Nuzzle, Thunder Wave, Glare, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burn-frostbite-sizzly-slide-will-o-wisp-freezy-frost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Burn, Frostbite (Sizzly Slide, Will-O-Wisp, Freezy Frost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confusion-confuse-ray-supersonic-swagger-flatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confusion (Confuse Ray, Supersonic, Swagger, Flatter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-lowering-effects-scary-face-electroweb-syrup-bomb-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed lowering effects (Scary Face, Electroweb, Syrup Bomb, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-defense-special-defense-and-special-attack-lowering-effects-charm-lunge-screech-rock-smash-metal-sound-lumina-crash-confide-mystical-fire-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack, Defense, Special Defense and Special Attack lowering effects (Charm, Lunge, Screech, Rock Smash, Metal Sound, Lumina Crash, Confide, Mystical Fire, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-lowering-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accuracy lowering effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sticky Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tailwind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trick-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trick Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explosion-moves-memento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explosion-Moves, Memento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-gambit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Gambit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baton-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baton Pass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-turn-volt-switch-flip-turn-parting-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-Turn, Volt Switch, Flip Turn, Parting Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knock Off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screens-light-screen-reflect-aurora-veil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screens (Light Screen, Reflect, Aurora Veil)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret Power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ohko-moves-fissure-horn-drill-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OHKO Moves (Fissure, Horn Drill, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding-moves-fire-spin-whirlpool-snap-trap-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binding Moves (Fire Spin, Whirlpool, Snap Trap, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salt-cure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salt Cure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapping-octolock-mean-look-anchor-shot-spirit-shackle-thousand-waves-jaw-lock-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trapping (Octolock, Mean Look, Anchor Shot, Spirit Shackle, Thousand Waves, Jaw Lock, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-moves-recover-slack-off-heal-order-roost-strength-sap-pain-split-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery Moves (Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drain-moves-giga-drain-draining-kiss-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drain-Moves (Giga Drain, Draining Kiss, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copycat-mirror-move-me-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copycat, Mirror Move, Me First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roar-whirlwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roar, Whirlwind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon-tail-circle-throw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dragon Tail, Circle Throw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversion 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laser-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laser Focus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Energy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shed-tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shed Tail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substitute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Substitute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leech-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leech Seed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teleport-chilly-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teleport, Chilly Reception
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sky-attack-freeze-shock-ice-burn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sky Attack, Freeze Shock, Ice Burn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snore-sleep-talk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snore, Sleep Talk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destiny-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Destiny Bond
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wish
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aromatherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aromatherapy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nightmare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nightmare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perish-song" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perish Song
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weather-terrain-moves-sunny-day-sandstorm-electric-terrain-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weather &amp; Terrain Moves (Sunny Day, Sandstorm, Electric Terrain, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attract
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taunt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollout-ice-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollout, Ice Ball
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fury-cutter-echoed-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fury Cutter, Echoed Voice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection-protect-kings-shield-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protection (Protect, King’s Shield, etc.)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protection (Protect, King’s Shield, etc.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kings-shield-aegislash-ai-doesnt-stack-with-the-following-parts-of-protection-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        King’s Shield / Aegislash AI (doesn’t stack with the following parts of Protection AI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-construct-and-zen-mode-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Construct and Zen Mode AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-protection-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Protection Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fake-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fake Out
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upper Hand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pursuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pursuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucker-punch-thunderclap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucker Punch, Thunderclap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imprison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imprison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wonder-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wonder Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mud-sport-water-sport-magic-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mud Sport, Water Sport, Magic Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gravity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gravity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relic-song" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relic Song
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Powder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnet-rise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnet Rise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metronome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metronome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topsy-turvy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topsy Turvy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revival-blessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revival Blessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror-coat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mirror Coat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metal-burst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metal Burst
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psych-up-spectral-thief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Psych Up, Spectral Thief
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recharge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recharge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-battle-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double Battle only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority-moves-weakness-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Moves - Weakness Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spread-moves-to-override-negative-abilities-brutal-swing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spread Moves to override negative abilities (Brutal Swing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beat-up-double-battle-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beat Up (Double Battle only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heal-pulse-floral-healing-pollen-puff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heal Pulse, Floral Healing, Pollen Puff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helping-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helping Hand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon-cheer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dragon Cheer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coaching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role Play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrainment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrainment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teatime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teatime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acupressure-speed-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acupressure, Speed Swap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ally-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ally Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-me-rage-powder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow Me, Rage Powder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Round
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extra Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#should-ai-recover-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should AI Recover function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-scores-to-be-aware-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common scores to be aware of
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damaging-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damaging Moves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damaging Moves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-a-damaging-move-kills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If a damaging move kills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#damaging-priority-moves-feint-excluded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damaging priority moves (Feint excluded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moves-that-thaw-the-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moves that thaw the user
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choice-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-priority-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Score priority overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Score priority overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offensive-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offensive Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defensive-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defensive Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mixed-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rapid-spin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rapid Spin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order Up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evasion-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evasion Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geomancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geomancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-smash-belly-drum-filet-away-clangorous-soul" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Smash, Belly Drum, Filet Away, Clangorous Soul
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acupressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acupressure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defense-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense Curl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stockpile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stockpile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fell-stinger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fell Stinger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meteor-beam-electro-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Meteor Beam, Electro Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleep-sing-dark-void-yawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sleep (Sing, Dark Void, Yawn)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poison-poison-gas-toxic-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Poison (Poison Gas, Toxic, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paralysis-nuzzle-thunder-wave-glare-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paralysis (Nuzzle, Thunder Wave, Glare, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#burn-frostbite-sizzly-slide-will-o-wisp-freezy-frost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Burn, Frostbite (Sizzly Slide, Will-O-Wisp, Freezy Frost)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confusion-confuse-ray-supersonic-swagger-flatter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confusion (Confuse Ray, Supersonic, Swagger, Flatter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-lowering-effects-scary-face-electroweb-syrup-bomb-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed lowering effects (Scary Face, Electroweb, Syrup Bomb, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-defense-special-defense-and-special-attack-lowering-effects-charm-lunge-screech-rock-smash-metal-sound-lumina-crash-confide-mystical-fire-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attack, Defense, Special Defense and Special Attack lowering effects (Charm, Lunge, Screech, Rock Smash, Metal Sound, Lumina Crash, Confide, Mystical Fire, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-lowering-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accuracy lowering effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sticky Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tailwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tailwind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trick-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trick Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explosion-moves-memento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explosion-Moves, Memento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-gambit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Gambit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baton-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baton Pass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-turn-volt-switch-flip-turn-parting-shot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-Turn, Volt Switch, Flip Turn, Parting Shot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knock-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knock Off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screens-light-screen-reflect-aurora-veil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screens (Light Screen, Reflect, Aurora Veil)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secret Power
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ohko-moves-fissure-horn-drill-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OHKO Moves (Fissure, Horn Drill, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding-moves-fire-spin-whirlpool-snap-trap-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binding Moves (Fire Spin, Whirlpool, Snap Trap, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salt-cure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salt Cure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trapping-octolock-mean-look-anchor-shot-spirit-shackle-thousand-waves-jaw-lock-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trapping (Octolock, Mean Look, Anchor Shot, Spirit Shackle, Thousand Waves, Jaw Lock, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recovery-moves-recover-slack-off-heal-order-roost-strength-sap-pain-split-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery Moves (Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drain-moves-giga-drain-draining-kiss-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drain-Moves (Giga Drain, Draining Kiss, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copycat-mirror-move-me-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copycat, Mirror Move, Me First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roar-whirlwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roar, Whirlwind
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon-tail-circle-throw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dragon Tail, Circle Throw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversion 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laser-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laser Focus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Energy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shed-tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shed Tail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substitute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Substitute
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leech-seed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leech Seed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teleport-chilly-reception" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teleport, Chilly Reception
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sky-attack-freeze-shock-ice-burn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sky Attack, Freeze Shock, Ice Burn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#encore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snore-sleep-talk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snore, Sleep Talk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destiny-bond" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Destiny Bond
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wish
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aromatherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aromatherapy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nightmare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nightmare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perish-song" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perish Song
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weather-terrain-moves-sunny-day-sandstorm-electric-terrain-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weather &amp; Terrain Moves (Sunny Day, Sandstorm, Electric Terrain, etc.)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attract
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taunt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollout-ice-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollout, Ice Ball
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fury-cutter-echoed-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fury Cutter, Echoed Voice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protection-protect-kings-shield-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protection (Protect, King’s Shield, etc.)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protection (Protect, King’s Shield, etc.)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kings-shield-aegislash-ai-doesnt-stack-with-the-following-parts-of-protection-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        King’s Shield / Aegislash AI (doesn’t stack with the following parts of Protection AI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-construct-and-zen-mode-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Construct and Zen Mode AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-protection-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Protection Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fake-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fake Out
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upper Hand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pursuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pursuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sucker-punch-thunderclap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sucker Punch, Thunderclap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imprison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imprison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wonder-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wonder Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mud-sport-water-sport-magic-room" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mud Sport, Water Sport, Magic Room
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gravity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gravity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relic-song" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relic Song
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Powder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnet-rise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnet Rise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metronome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metronome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topsy-turvy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topsy Turvy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revival-blessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revival Blessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Counter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mirror-coat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mirror Coat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metal-burst" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metal Burst
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psych-up-spectral-thief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Psych Up, Spectral Thief
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recharge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recharge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-battle-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double Battle only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority-moves-weakness-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Moves - Weakness Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spread-moves-to-override-negative-abilities-brutal-swing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spread Moves to override negative abilities (Brutal Swing)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beat-up-double-battle-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beat Up (Double Battle only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heal-pulse-floral-healing-pollen-puff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heal Pulse, Floral Healing, Pollen Puff
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helping-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helping Hand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragon-cheer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dragon Cheer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coaching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coaching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role Play
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrainment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrainment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teatime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teatime
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instruct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acupressure-speed-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acupressure, Speed Swap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ally-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ally Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#follow-me-rage-powder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow Me, Rage Powder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Round
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extra Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#should-ai-recover-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should AI Recover function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="move-scoring">Move scoring</h1>
+<h2 id="common-scores-to-be-aware-of">Common scores to be aware of</h2>
+<pre><code>Highest damaging move (HDM):                           +6 (75%), +8 (25%)  
+Slow kill (AI kills but is slower than target):     +9 (75%), +11 (25%)  
+Fast kill (AI kills and is faster* than target):    +12 (75%), +14 (25%)
+</code></pre>
+<p>*AI sees speed ties as being faster than the player and priority move kill counts as fast kill</p>
+<h2 id="damaging-moves">Damaging Moves</h2>
+<p>AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: +6 (75%), +8 (25%)<br />
+If multiple moves kill, then they are all considered HDM and all get this score.<br />
+There are a few specific damaging moves that do not have their damage rolled normally and are thus never considered HDM. These moves are:</p>
+<ul>
+<li>Explosion, Self-Destruct, Misty Explosion  </li>
+<li>Final Gambit  </li>
+<li>Meteor Beam   </li>
+<li>Future Sight  </li>
+<li>OHKO moves  </li>
+<li>Feint, Upper Hand</li>
+</ul>
+<h4 id="if-a-damaging-move-kills">If a damaging move kills</h4>
+<ul>
+<li>If AI is faster or the move has priority and AI is slower: +6 Score  </li>
+<li>If AI is slower: +3 Score  </li>
+<li>The following moves do not receive a kill bonus: Explosion, Self-Destruct, Misty Explosion, Final Gambit, Rollout, Ice Ball, OHKO moves  </li>
+<li>The following moves receive a kill bonus, despite never being considered as HDM: Meteor Beam, Future Sight.  </li>
+<li>If AI has Moxie, Beast Boost, Chilling Neigh, or Grim Neigh: +1 Score</li>
+</ul>
+<h4 id="damaging-priority-moves-feint-excluded">Damaging priority moves (Feint excluded)</h4>
+<ul>
+<li>If AI is slower and Player can faint AI:  </li>
+<li>If the priority move is also HDM: +5 Score  </li>
+<li>Else: +11 Score  </li>
+<li>Else if AI is slower and has Eject Button: +11 Score</li>
+</ul>
+<h4 id="moves-that-thaw-the-user">Moves that thaw the user</h4>
+<p>If AI is frozen or frostbitten: +12 Score</p>
+<h4 id="choice-ai">Choice AI</h4>
+<p>If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.</p>
+<h2 id="score-priority-overview">Score priority overview</h2>
+<p>The following provides a high-level overview of how maximum move scores are prioritized within the AI logic. This list is not exhaustive and is only intended to illustrate the general hierarchy and relative score priority of different decision outcomes.</p>
+<h3 id="tier-1">Tier 1</h3>
+<ul>
+<li>Fast kill  </li>
+<li>Palafins Flip Turn  </li>
+<li>If frozen: Moves that thaw the user  </li>
+<li>Damaging Gimmick moves (Feint, Upper Hand, Beat Up, Round, Weakness Policy activation, Pursuit, if user has a negative ability and target has a Mummy-like ability)  </li>
+<li>Protect (For achieving form change gimmicks, e.g Power Construct, Stance Change, Zen Mode)  </li>
+</ul>
+<h3 id="tier-2">Tier 2</h3>
+<ul>
+<li>Slow kill  </li>
+<li>Field moves:   <ul>
+<li>Trick Room, Wonder Room, Magic Room, Gravity, Mud Sport, Water Sport  </li>
+<li>Hazards, Tailwind  </li>
+</ul>
+</li>
+<li>With Power Herb: 2-turn moves with powerful side effects (Geomancy, Meteor Beam, Electro Shot, Sky Attack, Freeze Shock, Ice Burn)  </li>
+<li>Boosting a partners stats  <ul>
+<li>Swagger and Flatter if the partner will not be confused  </li>
+<li>Coaching, Decorate  </li>
+</ul>
+</li>
+<li>Status Gimmick moves (Psych Up, Role Play, etc)  </li>
+</ul>
+<h3 id="tier-3">Tier 3</h3>
+<ul>
+<li>Highest Damage move (HDM)  </li>
+<li>Status moves  </li>
+<li>Damaging moves with guaranteed side-effects (doesn’t stack with HDM score)</li>
+</ul>
+<p><strong><em>General:</em></strong></p>
+<h3 id="offensive-setup">Offensive Setup</h3>
+<p>Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor</p>
+<ul>
+<li>If Player is incapacitated: +3 Score (90%)  </li>
+<li>Else if Player kills AI in 4 or more hits  </li>
+<li>If Player is faster: +1 Score  </li>
+<li>If Player is slower: +2 Score  </li>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  </li>
+<li>If Player kills AI in 1 hit: -20 Score (Accounts for Disguise and Substitute)  </li>
+<li>If Player fast kills AI in 2 hits: -5 Score (Accounts for Disguise)  </li>
+<li>If the following applies: -5 Score:  </li>
+<li>Player has Burning Jealousy / Alluring Voice, AI is faster and move raises Attack  </li>
+<li>Player has Foul Play or a move that inflicts confusion and move raises Attack  </li>
+<li>Player has a phazing move and AI is not on last mon  </li>
+<li>If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)</li>
+</ul>
+<h3 id="defensive-setup">Defensive Setup</h3>
+<p>Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash</p>
+<ul>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  </li>
+<li>If Player kills AI in 1 hit: -20 Score (Accounts for Disguise and Substitute)  </li>
+<li>If Player fast kills AI in 2 hits: -5 Score (Accounts for Disguise)  </li>
+<li>If Player has a phazing move and AI is not on last mon: -5 Score  </li>
+<li>80% of the time:  </li>
+<li>If Player is incapacitated: +2 Score (90%)  </li>
+<li>If Defense boost  <ul>
+<li>If Player has physical moves and no special moves: +1 Score  </li>
+<li>If Def is +2 or higher and AI doesn’t have Body Press: -1 Score  </li>
+</ul>
+</li>
+<li>If Special Defense boost:  <ul>
+<li>If Player has special moves and no physical moves: +1 Score  </li>
+<li>If Sp. Def is +2 or higher and AI doesn’t have Stored Power: -1 Score  </li>
+</ul>
+</li>
+<li>If Defense and Special Defense boost:  <ul>
+<li>If Def or Sp. Def is lower than +1: +2 Score  </li>
+</ul>
+</li>
+<li>If AI has Stored Power or Body Press: +1 Score (50%)</li>
+</ul>
+<h3 id="mixed-setup">Mixed Setup</h3>
+<p>No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower<br />
+Calm Mind, Quiver Dance</p>
+<p>Moves are categorized as either <strong>Defensive Setup</strong> or <strong>Offensive Setup</strong>, depending on the player's Pokémon moveset.</p>
+<p>If a move boosts <strong>physical stats</strong> (and No Retreat), it is treated as <strong>Defensive Setup</strong> when the player’s Pokémon has at least one physical attacking move and no special attacking moves. If the Pokémon has no physical attacking moves or includes at least one special attacking move, the move is treated as <strong>Offensive Setup</strong>.</p>
+<p>If a move boosts <strong>special stats</strong>, the logic is mirrored: it is treated as <strong>Defensive Setup</strong> when the player’s Pokémon has at least one special attacking move and no physical attacking moves. Otherwise, it is treated as <strong>Offensive Setup</strong>.</p>
+<p>If the move is <em>Curse</em> and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.</p>
+<h3 id="speed-setup">Speed Setup</h3>
+<p>Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot</p>
+<ul>
+<li>If Player has Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  </li>
+<li>If AI is faster: -20 Score  </li>
+<li>If AI is slower: +1 Score (80%)</li>
+</ul>
+<h3 id="rapid-spin">Rapid Spin</h3>
+<p>Treated as Speed Setup and additionally:</p>
+<ul>
+<li>If AI is Leech Seeded or Wrapped: +1 Score  </li>
+<li>If any hazard is up: +2 Score (50%)</li>
+</ul>
+<h3 id="order-up">Order Up</h3>
+<p>If Commander is active:</p>
+<ul>
+<li>If Tatsugiri Curly is commanding: Treated like Power-Up Punch  </li>
+<li>If Tatsugiri Droopy is commanding: Treated like Psyshield Bash  </li>
+<li>If Tatsugiri Stretchy is commanding: Treated like Flame Charge</li>
+</ul>
+<h3 id="evasion-setup">Evasion Setup</h3>
+<p>Double Team, Minimize</p>
+<ul>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  </li>
+<li>If AI HP &gt; 90%: +1 Score (80%)  </li>
+<li>Else if AI HP &gt; 60%: +1 Score (60%)</li>
+</ul>
+<h3 id="geomancy">Geomancy</h3>
+<ul>
+<li>If Player kills AI: -20 Score  </li>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  </li>
+<li>If move can be immediately used: +9 Score (80%)  </li>
+<li>Else -20 Score</li>
+</ul>
+<h3 id="shell-smash-belly-drum-filet-away-clangorous-soul">Shell Smash, Belly Drum, Filet Away, Clangorous Soul</h3>
+<ul>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move (and AI is not on last mon): -20 Score  </li>
+<li>If Player is incapacitated: +3 Score (90%)  </li>
+<li>Else if Player faints AI after setup: -2 Score (Accounts for berries)  </li>
+<li>Else +2 Score</li>
+</ul>
+<h3 id="acupressure">Acupressure</h3>
+<ul>
+<li>If Player kills AI: -20 Score  </li>
+<li>If Player has Unaware, Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  </li>
+<li>If Player fast kills AI in 2 hits: -5 Score (Accounts for Disguise)  </li>
+<li>If Player is incapacitated: +3 Score (90%)  </li>
+<li>Else if Player kills AI in 4 or more hits  </li>
+<li>If Player is faster: +1 Score  </li>
+<li>If Player is slower: +2 Score</li>
+</ul>
+<h3 id="charge">Charge</h3>
+<ul>
+<li>If Player kills AI: -20 Score  </li>
+<li>If Player has a phazing move: -20 Score  </li>
+<li>If AI has an electric type move: +1 Score</li>
+</ul>
+<h3 id="defense-curl">Defense Curl</h3>
+<p>Additional to the Defensive Setup properties:</p>
+<ul>
+<li>If AI has Rollout or Ice Ball, and AI doesn’t already have Defense Curl: +1 Score</li>
+</ul>
+<h3 id="stockpile">Stockpile</h3>
+<p>Additional to the Defensive Setup properties:</p>
+<ul>
+<li>If AI has Spit Up or Swallow: +1 Score</li>
+</ul>
+<h3 id="fell-stinger">Fell Stinger</h3>
+<p>If move can faint Player:</p>
+<ul>
+<li>If AI is faster: +9 Score  </li>
+<li>If AI is slower: +6 Score</li>
+</ul>
+<h3 id="meteor-beam-electro-shot">Meteor Beam, Electro Shot</h3>
+<ul>
+<li>If move can be immediately used: +9 Score  </li>
+<li>Else -20 Score</li>
+</ul>
+<h3 id="sleep-sing-dark-void-yawn">Sleep (Sing, Dark Void, Yawn)</h3>
+<p>25% of the time, if AI doesn’t see kill with its maxroll:</p>
+<ul>
+<li>If the target can be put to sleep: +1 Score  </li>
+<li>If it has the one of the following moves: Dream Eater, Nightmare, Snore, Sleep Talk: +1 Score  </li>
+<li>If it or the partner has the one of the following moves: Hex, Infernal Parade: +1 Score</li>
+</ul>
+<p>Additionally, if it’s a Double Battle and the move is Dark Void: +2 Score (80%)</p>
+<h3 id="poison-poison-gas-toxic-etc">Poison (Poison Gas, Toxic, etc.)</h3>
+<p>20% of the time, if AI doesn’t see kill with its maxroll, and if the player’s HP is &gt; 20%:</p>
+<ul>
+<li>If the player has no damaging moves: +1 Score  </li>
+<li>If AI has Protect, +1 Score  </li>
+<li>If AI has Venoshock, Hex, Infernal Parade, Venom Drench or Merciless: +1 Score</li>
+</ul>
+<h3 id="paralysis-nuzzle-thunder-wave-glare-etc">Paralysis (Nuzzle, Thunder Wave, Glare, etc.)</h3>
+<p>If AI doesn’t see kill with its maxroll:</p>
+<ul>
+<li>If AI is slower before paralysis but faster after paralysis: +2 Score  </li>
+<li>Else if AI has Hex, Infernal Parade or flinching moves: +2 Score  </li>
+<li>Else if Player is confused or infatuated: +2 Score  </li>
+<li>Else: +1 Score</li>
+</ul>
+<h3 id="burn-frostbite-sizzly-slide-will-o-wisp-freezy-frost">Burn, Frostbite (Sizzly Slide, Will-O-Wisp, Freezy Frost)</h3>
+<p>33% of the time, if AI doesn’t see kill with its maxroll:</p>
+<ul>
+<li>+1 Score  </li>
+<li>If Player has physical moves (special moves for Frostbite): +1 Score  </li>
+<li>Else if AI or Partner has Hex or Infernal Parade: +1 Score</li>
+</ul>
+<h3 id="confusion-confuse-ray-supersonic-swagger-flatter">Confusion (Confuse Ray, Supersonic, Swagger, Flatter)</h3>
+<p>25% of the time, if AI doesn’t see kill with its maxroll:</p>
+<ul>
+<li>If the target can be confused: +1 Score  </li>
+<li>If the player is paralyzed, infatuated or if the AI has Serene Grace and flinching moves: +1 Score</li>
+</ul>
+<p>Additionally for Swagger and Flatter:</p>
+<ul>
+<li>If the AI has Psych Up, Spectral Thief, Mirror Herb or Foul Play (Swagger only): +1 Score  </li>
+<li>In a Double Battle, +9 Score (25%), +8 Score (75%) if the partner cannot be confused and if the partner benefits from the respective stat boost.</li>
+</ul>
+<h3 id="speed-lowering-effects-scary-face-electroweb-syrup-bomb-etc">Speed lowering effects (Scary Face, Electroweb, Syrup Bomb, etc.)</h3>
+<ul>
+<li>If AI is slower and move is status: +1 Score  </li>
+<li>If AI is faster: -2 Score</li>
+</ul>
+<p>Additionally, if it’s a Double Battle and the move is a damaging spread move: +1 Score</p>
+<h3 id="attack-defense-special-defense-and-special-attack-lowering-effects-charm-lunge-screech-rock-smash-metal-sound-lumina-crash-confide-mystical-fire-etc">Attack, Defense, Special Defense and Special Attack lowering effects (Charm, Lunge, Screech, Rock Smash, Metal Sound, Lumina Crash, Confide, Mystical Fire, etc.)</h3>
+<ul>
+<li>If Player has -1 of the stat or less: -2 Score (80%)  </li>
+<li>Else +1 Score (20%)  </li>
+<li>If move lowers Attack or Special Attack and Player doesn’t have a move of the corresponding category: -2 Score</li>
+</ul>
+<h3 id="accuracy-lowering-effects">Accuracy lowering effects</h3>
+<p>80% of the time, if the player has -2 accuracy or less: -2 Score</p>
+<ul>
+<li>If AI HP &gt; 90%, +2 Score (80%)  </li>
+<li>Else if AI HP &gt; 60%, +1 Score (80%)  </li>
+<li>Else if AI HP &lt; 60%, -1 Score</li>
+</ul>
+<h3 id="stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes">Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes</h3>
+<ul>
+<li>If Player is on last mon: -10 Score  </li>
+<li>If its AIs first turn and is not last mon: +2 Score (98%)  </li>
+<li>$0.75 * \frac{AIAliveMons}{AITotalMons}$ of the time: +1 Score  </li>
+<li>Example: If AI has a total of 5 mons and 3 alive: $0.75 * \frac{3}{5} = 0.45 = 45\%$ which leads to +1 Score (45%)  </li>
+<li>Additionally for (Toxic) Spikes: If there is 1 or more layers up: -1 Score (98%)</li>
+</ul>
+<h3 id="sticky-web">Sticky Web</h3>
+<ul>
+<li>If Player is on last mon: -10 Score  </li>
+<li>If its AIs first turn: +3 Score  </li>
+<li>$0.75 * \frac{AIAliveMons}{AITotalMons}$ of the time: +1 Score</li>
+</ul>
+<h3 id="tailwind">Tailwind</h3>
+<ul>
+<li>If Player has Trick Room or Taunt: -1 Score (50%)  </li>
+<li>If AI mon or its partner are slower than any player mon on the field: +3 Score  </li>
+<li>If Player has Tailwind up and Tailwind Setter is slower than target: +3 Score</li>
+</ul>
+<h3 id="trick-room">Trick Room</h3>
+<ul>
+<li>If Player has Trick Room or Taunt: -1 Score (50%)  </li>
+<li>If AI mon or its partner are slower than any player mon on the field: +4 Score  </li>
+<li>Else: -1 Score</li>
+</ul>
+<h3 id="explosion-moves-memento">Explosion-Moves, Memento</h3>
+<ul>
+<li>If AI mon is at less than 10% HP: +10 Score  </li>
+<li>Else if AI mon is at less than 33% HP: +8 Score (70%), +0 Score (30%)  </li>
+<li>Else if AI mon is at less than 66% HP: +7 Score (50%), +0 Score (50%)  </li>
+<li>Else: +7 Score (5%), +0 Score (95%)</li>
+</ul>
+<p>Additionally:</p>
+<ul>
+<li>If it’s the last mon for the AI  </li>
+<li>If it isn’t the last mon for the player: -10 Score  </li>
+<li>Else -1 Score  </li>
+<li>If the move is Memento and the target’s stats cannot be lowered: -20 Score</li>
+</ul>
+<h3 id="final-gambit">Final Gambit</h3>
+<ul>
+<li>If AI mon is faster and has equal or higher current HP than player mon: +8 Score  </li>
+<li>If above is not true, and AI is faster and dies to player mon: +7 Score  </li>
+<li>Else:  +6 Score</li>
+</ul>
+<p>Additionally:</p>
+<ul>
+<li>If it’s the last mon for the AI  </li>
+<li>If it isn’t the last mon for the player: -10 Score  </li>
+<li>Else -1 Score</li>
+</ul>
+<h3 id="baton-pass">Baton Pass</h3>
+<ul>
+<li>If Player has a phazing move and AI has no stat raised: -20 Score  </li>
+<li>25% of the time: -1 Score  </li>
+<li>If AI can pass something positive: +1 Score</li>
+</ul>
+<h3 id="u-turn-volt-switch-flip-turn-parting-shot">U-Turn, Volt Switch, Flip Turn, Parting Shot</h3>
+<ul>
+<li>If AI is Palafin: +12 Score (doesn’t stack with anything else)  </li>
+<li>If AI kills Player in more than 3 hits: +6 Score (unless move is Parting Shots, which already starts as +6 Score due to being a status move)  </li>
+<li>If Player has a phazing move: -1 Score</li>
+</ul>
+<h3 id="knock-off">Knock Off</h3>
+<ul>
+<li>If AI kills Player in more than 3 hits: +6 Score (Unless Player cannot lose the item)</li>
+</ul>
+<h3 id="screens-light-screen-reflect-aurora-veil">Screens (Light Screen, Reflect, Aurora Veil)</h3>
+<p>If AI should set screen:</p>
+<ul>
+<li>+1 Score (50%)  </li>
+<li>If AI has Light Clay: +1 Score</li>
+</ul>
+<p>AI fails the should set screen routine if the player has no physical move when Reflect is considered and vice versa. Aurora Veil always passes the check if snow or hail is active.</p>
+<h3 id="secret-power">Secret Power</h3>
+<p>25% of the time, if Grassy Terrain is active: +6 Score</p>
+<h3 id="ohko-moves-fissure-horn-drill-etc">OHKO Moves (Fissure, Horn Drill, etc.)</h3>
+<ul>
+<li>If AI kills player in 3 or more hits: +6 Score  </li>
+<li>Else +5 Score  </li>
+<li>If Lock On is Active: +8 Score  </li>
+<li>If Player has Focus Band or Focus Sash/Sturdy active: -20 Score</li>
+</ul>
+<h3 id="binding-moves-fire-spin-whirlpool-snap-trap-etc">Binding Moves (Fire Spin, Whirlpool, Snap Trap, etc.)</h3>
+<ul>
+<li>If player is immune to trapping: -20 Score  </li>
+<li>+6 Score (80%), +8 Score (20%)  </li>
+<li>If AI has Binding Band or Grip Claw: +1 Score</li>
+</ul>
+<h3 id="salt-cure">Salt Cure</h3>
+<ul>
+<li>+6 Score (80%), +7 Score (20%)  </li>
+<li>If player is Water or Steel Type: +1 Score</li>
+</ul>
+<h3 id="trapping-octolock-mean-look-anchor-shot-spirit-shackle-thousand-waves-jaw-lock-etc">Trapping (Octolock, Mean Look, Anchor Shot, Spirit Shackle, Thousand Waves, Jaw Lock, etc.)</h3>
+<ul>
+<li>If player isn’t immune to trapping: +6 Score</li>
+</ul>
+<h3 id="recovery-moves-recover-slack-off-heal-order-roost-strength-sap-pain-split-etc">Recovery Moves (Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, etc.)</h3>
+<ul>
+<li>If AI decides it should recover: +1 Score  </li>
+<li>Else: -1 Score  </li>
+<li>Pain Split is only used if AI recovers more than 30%</li>
+</ul>
+<p>For extra details on the function that AI uses to decide when to recover, see the extra details below.</p>
+<h3 id="drain-moves-giga-drain-draining-kiss-etc">Drain-Moves (Giga Drain, Draining Kiss, etc.)</h3>
+<p>If the target doesn’t have Liquid Ooze:</p>
+<ul>
+<li>If AI is at half HP or under, and if that move kills player in &lt;= 4 hits: +6 Score  </li>
+<li>If AI has Big Root: +1 Score</li>
+</ul>
+<h3 id="copycat-mirror-move-me-first">Copycat, Mirror Move, Me First</h3>
+<p>AI understands what move will be copied and applies its AI routine on it</p>
+<h3 id="roar-whirlwind">Roar, Whirlwind</h3>
+<ul>
+<li>If AI has 3 layers of Spikes up: +1 Score  </li>
+<li>If AI has 2 layers of Spikes up: +1 Score (75%)  </li>
+<li>If AI has 1 layer of Spikes up: +1 Score (50%)  </li>
+<li>If AI has Stealth Rock up: +1 Score (50%)  </li>
+<li>50% of the time: -1 Score</li>
+</ul>
+<h3 id="dragon-tail-circle-throw">Dragon Tail, Circle Throw</h3>
+<ul>
+<li>If Player is Perish Song’ed: -20 Score  </li>
+<li>If Player can faint AI: -20 Score  </li>
+<li>Does not follow Roar AI.</li>
+</ul>
+<h3 id="conversion">Conversion</h3>
+<p>+2 Score if type can still be changed.</p>
+<h3 id="conversion-2">Conversion 2</h3>
+<ul>
+<li>If AI already resists or is immune to Players last used move: -20 Score  </li>
+<li>If Player can faint AI: +1 Score</li>
+</ul>
+<h3 id="laser-focus">Laser Focus</h3>
+<ul>
+<li>If AI has Sniper: +1 Score  </li>
+<li>If target cannot be crit: -20 Score</li>
+</ul>
+<h3 id="focus-energy">Focus Energy</h3>
+<ul>
+<li>If AI has Sniper, Super Luck, Scope Lens or High Crit Moves: +1 Score  </li>
+<li>If target cannot be crit: -20 Score</li>
+</ul>
+<h3 id="shed-tail">Shed Tail</h3>
+<p>-20 if Player has sound moves or Infiltrator</p>
+<ul>
+<li>If Player can faint AI and AI is faster: +1 Score (50%)  </li>
+<li>Else: +1 Score (25%)</li>
+</ul>
+<h3 id="substitute">Substitute</h3>
+<p>-20 if Player has sound moves (while AI doesn’t have Soundproof) or Infiltrator</p>
+<ul>
+<li>If Player has Perish Song effect: +1 Score  </li>
+<li>If Player is burned, poisoned or frostbitten: +1 Score (25%)  </li>
+<li>If Player is wrapped and AI HP &gt; 70%: +1 Score (25%)  </li>
+<li>If AI has Speed Boost: +1 Score (25%)  </li>
+<li>50% of the time: -1 Score</li>
+</ul>
+<h3 id="leech-seed">Leech Seed</h3>
+<ul>
+<li>If Player doesn’t have Rapid Spin or Magic Guard: +1 Score (50%)  </li>
+<li>If AI kills Player in more than 3 hits: +1 Score (50%)</li>
+</ul>
+<h3 id="teleport-chilly-reception">Teleport, Chilly Reception</h3>
+<ul>
+<li>If AI is faster and Player faints AI: -20 Score  </li>
+<li>If AI kills Player in more than 3 hits: +1 Score (50%)</li>
+</ul>
+<h3 id="sky-attack-freeze-shock-ice-burn">Sky Attack, Freeze Shock, Ice Burn</h3>
+<ul>
+<li>If move can be immediately used: +9 Score (80%)  </li>
+<li>Else -20 Score</li>
+</ul>
+<h3 id="disable">Disable</h3>
+<ul>
+<li>If AI is faster and last used move of player can faint AI: +1 Score</li>
+</ul>
+<h3 id="encore">Encore</h3>
+<ul>
+<li>If AI is faster and last used move of player is encouraged to be encored: +1 Score  </li>
+<li>Encore encouraged effects: Status moves, Fake Out, First Impression</li>
+</ul>
+<h3 id="snore-sleep-talk">Snore, Sleep Talk</h3>
+<ul>
+<li>If it’s not a wakeup turn and AI is asleep: +15 Score  </li>
+<li>Sleep Talk does not get a Score increase if the user has Comatose</li>
+</ul>
+<h3 id="destiny-bond">Destiny Bond</h3>
+<ul>
+<li>If AI has Sash or Disguise active: -20 Score  </li>
+<li>If AI is faster and player can faint AI: +1 Score (81.5%)  </li>
+<li>Else if AI is slower: -1 Score (50%)</li>
+</ul>
+<h3 id="wish">Wish</h3>
+<ul>
+<li>If any mon in Party has HP &lt; 65%: +1 Score</li>
+</ul>
+<h3 id="aromatherapy">Aromatherapy</h3>
+<ul>
+<li>If any mon in Party has status: +1 Score</li>
+</ul>
+<h3 id="nightmare">Nightmare</h3>
+<ul>
+<li>If Player is asleep: +1 Score  </li>
+<li>If Player is trapped: +1 Score</li>
+</ul>
+<h3 id="perish-song">Perish Song</h3>
+<ul>
+<li>If Player is trapped: +2 Score</li>
+</ul>
+<h3 id="weather-terrain-moves-sunny-day-sandstorm-electric-terrain-etc">Weather &amp; Terrain Moves (Sunny Day, Sandstorm, Electric Terrain, etc.)</h3>
+<ul>
+<li>+2 Score  </li>
+<li>If AI holds an item that increases its duration: +1 Score (80%)</li>
+</ul>
+<h3 id="attract">Attract</h3>
+<ul>
+<li>If Player has any status or is trapped: +1 Score</li>
+</ul>
+<h3 id="taunt">Taunt</h3>
+<ul>
+<li>If Player has a status move: +1 Score (50%)  </li>
+<li>Else: -1 Score (50%)</li>
+</ul>
+<h3 id="rollout-ice-ball">Rollout, Ice Ball</h3>
+<ul>
+<li>+6 Score (50%), +7 Score (50%)  </li>
+<li>If AI has Defense Curl up: +1 Score</li>
+</ul>
+<h3 id="fury-cutter-echoed-voice">Fury Cutter, Echoed Voice</h3>
+<ul>
+<li>+6 Score  </li>
+<li>If AIs last used move was Fury Cutter / Echoed Voice: +2 Score</li>
+</ul>
+<h3 id="protection-protect-kings-shield-etc">Protection (Protect, King’s Shield, etc.)</h3>
+<p>Protect, Detect, Spiky Shield, Silk Trap, King’s Shield, Baneful Bunker, Obstruct, Burning Bulwark</p>
+<ul>
+<li>If Player is incapacitated: -20 Score  </li>
+<li>If AI is about to faint at the end of the turn: -10 Score  </li>
+<li>If AI used a protection move the previous turn: -10 Score (50%)  </li>
+<li>If AI successfully used 2 protection moves in a row last turns: -10 Score</li>
+</ul>
+<h4 id="kings-shield-aegislash-ai-doesnt-stack-with-the-following-parts-of-protection-ai">King’s Shield / Aegislash AI (doesn’t stack with the following parts of Protection AI)</h4>
+<ul>
+<li>If Player is faster and can faint AI: +10 Score (80%)  </li>
+<li>If Player has physical moves: +1 Score (75%)  </li>
+<li>Else 37.5% of the time: +1 Score</li>
+</ul>
+<h4 id="power-construct-and-zen-mode-ai">Power Construct and Zen Mode AI</h4>
+<ul>
+<li>If AI is in range of transforming, but not yet transformed: +8 Score (80%)</li>
+</ul>
+<h4 id="other-protection-logic">Other Protection Logic</h4>
+<ul>
+<li>If AI has one of the following conditions: Burn, Poison, Curse, Infatuation, Perish Song, Leech Seed, Yawn: -1 Score  </li>
+<li>If Player has one of the above conditions outside of Infatuation: +1 Score  </li>
+<li>If AI has Speed Boost, is slower and is its first turn out: +3 Score (80%)  </li>
+<li>Else if its AIs first turn out, its not a Double Battle and doesn’t have one of the following combinations: Toxic/Flame Orb + Guts/Quick Feet, Flame Orb + Flare Boost: -1 Score</li>
+</ul>
+<h3 id="endure">Endure</h3>
+<p>Endure uses the same counter as protection moves for failure checks</p>
+<ul>
+<li>If AI used a protection move the previous turn: -10 Score (50%)  </li>
+<li>If AI successfully used 2 protection moves in a row last turns: -10 Score  </li>
+<li>If Player can faint AI:   </li>
+<li>If AI has one of the following: Pinch Berry, Flail, Reversal, Endeavor, Rage Fist: +2 Score  </li>
+<li>Else if AI has Speed Boost: +1 Score, and an additional +1 Score if it also has Baton Pass  </li>
+<li>Else: -1 Score (50%)  </li>
+<li>Else: -1 Score (50%)</li>
+</ul>
+<h3 id="fake-out">Fake Out</h3>
+<ul>
+<li>+9 Score, stacks with HDM  </li>
+<li>If Player cannot be flinched and Fake Out doesn’t kill: -30 Score</li>
+</ul>
+<h3 id="feint">Feint</h3>
+<ul>
+<li>If its a Double Battle and Player has a Protection move: +13 Score (10%)  </li>
+<li>Else if Feint can kill Player: +6 Score (10%)</li>
+</ul>
+<h3 id="upper-hand">Upper Hand</h3>
+<ul>
+<li>If Player has a priority move: +13 Score (10%)</li>
+</ul>
+<h3 id="pursuit">Pursuit</h3>
+<ul>
+<li>If AIs Ability is Truant or Defeatist and Players Ability is Mummy, Wandering Spirit or Lingering Aroma: +12 Score (Does not stack with the following)  </li>
+<li>If Move faints Player: +11 Score  </li>
+<li>Else if Players HP &lt; 20%: +10 Score  </li>
+<li>Else if Players HP &lt; 40%: +8 Score (50%)  </li>
+<li>If AI is faster: +3 Score</li>
+</ul>
+<h3 id="sucker-punch-thunderclap">Sucker Punch, Thunderclap</h3>
+<ul>
+<li>If AI used Sucker Punch / Thunderclap last turn: -20 Score (66%)</li>
+</ul>
+<h3 id="imprison">Imprison</h3>
+<ul>
+<li>If Player has moves that can be imprisoned: +3 Score</li>
+</ul>
+<h3 id="wonder-room">Wonder Room</h3>
+<ul>
+<li>If Player has physical moves and AI has less defense than special defense (or vice versa): +1 Score  </li>
+<li>+2 Score (25%)</li>
+</ul>
+<h3 id="mud-sport-water-sport-magic-room">Mud Sport, Water Sport, Magic Room</h3>
+<ul>
+<li>+3 Score (25%)</li>
+</ul>
+<h3 id="gravity">Gravity</h3>
+<p>50% of the time</p>
+<ul>
+<li>+4 Score (75%), +5 Score (25%)</li>
+</ul>
+<h3 id="relic-song">Relic Song</h3>
+<ul>
+<li>If AI is Meloetta: +10 Score  </li>
+<li>If AI is Meloetta-Pirouette: +1 Score (25%)</li>
+</ul>
+<h3 id="powder">Powder</h3>
+<ul>
+<li>If Player has fire type moves: +1 Score  </li>
+<li>Else: -1 Score</li>
+</ul>
+<h3 id="magnet-rise">Magnet Rise</h3>
+<ul>
+<li>If AI is faster and Player has Ground moves: +2 Score (90%)  </li>
+<li>Else: -1 Score</li>
+</ul>
+<h3 id="metronome">Metronome</h3>
+<ul>
+<li>If its AIs last third (rounded down) of the team: -5 Score</li>
+</ul>
+<h3 id="fling">Fling</h3>
+<ul>
+<li>If AI has King’s Rock and is faster and Player can be flinched: +9 Score  </li>
+<li>In a Double Battle on partner: If Fling uses Salac Berry:  </li>
+<li>If it activates Weakness Policy: 12 Score (25%), +7 Score (75%)  </li>
+<li>Else if partner is slower than any player mon on the field: +10 Score (25%), +8 Score (75%)  </li>
+<li>Else: +8 Score (25%), +7 Score (75%)</li>
+</ul>
+<h3 id="topsy-turvy">Topsy Turvy</h3>
+<ul>
+<li>If Players positive stat changes are higher than the negative stat changes: +1 Score  </li>
+<li>Else: -1 Score  </li>
+<li>In a Double Battle on partner: If Partners positive stat changes are lower than the negative stat changes: +10 Score (25%), +8 Score (75%)</li>
+</ul>
+<h3 id="revival-blessing">Revival Blessing</h3>
+<p>AI always chooses first fainted mon in party order.</p>
+<ul>
+<li>+2 Score (50%)</li>
+</ul>
+<h3 id="counter">Counter</h3>
+<ul>
+<li>If Player only has physical moves, can faint AI and AI has Focus Sash / Sturdy active: +2 Score  </li>
+<li>Else if Player only has physical moves: +2 Score (80%)  </li>
+<li>If AI is faster: -1 Score (25%)  </li>
+<li>If Player has a status move: -1 Score (25%)</li>
+</ul>
+<h3 id="mirror-coat">Mirror Coat</h3>
+<ul>
+<li>If Player only has special moves, can faint AI and AI has Focus Sash / Sturdy active: +2 Score  </li>
+<li>Else if Player only has special moves: +2 Score (80%)  </li>
+<li>If AI is faster: -1 Score (25%)  </li>
+<li>If Player has a status move: -1 Score (25%)</li>
+</ul>
+<h3 id="metal-burst">Metal Burst</h3>
+<ul>
+<li>If AI is faster than Player: -20  </li>
+<li>If AI has Focus Sash / Sturdy active: +2 Score  </li>
+<li>+1 Score (25%), If Player has a status move: -1 Score (50%)</li>
+</ul>
+<h3 id="psych-up-spectral-thief">Psych Up, Spectral Thief</h3>
+<ul>
+<li>Loop through each stat  </li>
+<li>If Players Atk stage is higher than AIs and AI has physical moves: +1 Score  </li>
+<li>If Players Sp. Atk stage is higher than AIs and AI has special moves: +1 Score  </li>
+<li>Unconditional +1 Score for every other stat  </li>
+<li>Psych Up on Partner in a Double Battle: If Partner has more raised stats: +10 Score (25%), +8 Score (75%)</li>
+</ul>
+<h3 id="recharge">Recharge</h3>
+<p>Hyper Beam, Blast Burn, Hydro Cannon, Frenzy Plant, Giga Impact, Rock Wrecker, Roar of Time, Prismatic Laser, Meteor Assault, Eternabeam</p>
+<ul>
+<li>If move cannot faint player: -1 Score</li>
+</ul>
+<h3 id="double-battle-only">Double Battle only</h3>
+<p>If the status move targets a partner, it does not get the base +6 Score by default.<br />
+If the partner has one of the following abilities: +6 Score (25%) </p>
+<ul>
+<li>Volt Absorb, Earth Eater, Water Absorb and Dry Skin (if HP &lt;= 75%)  </li>
+<li>Lightning Rod, Storm Drain (if Sp. Atk can be increased and has special moves)  </li>
+<li>Sap Sipper (if Attack can be increased and has physical moves)  </li>
+<li>Motor Drive (if Speed can be increased)  </li>
+<li>Contrary</li>
+</ul>
+<h3 id="priority-moves-weakness-policy">Priority Moves - Weakness Policy</h3>
+<p>If priority move can activate Weakness Policy: +12 Score (25%), +8 Score (75%)</p>
+<h3 id="spread-moves-to-override-negative-abilities-brutal-swing">Spread Moves to override negative abilities (Brutal Swing)</h3>
+<p>The following abilities count as a negative ability: Emergency Exit, Truant, Defeatist, Slow Start.<br />
+If Partner is Mummy, Wandering Spirit or Lingering Aroma and move cannot faint partner: +9 Score (25%), +7 Score (75%)</p>
+<h3 id="beat-up-double-battle-only">Beat Up (Double Battle only)</h3>
+<p>+9 Score (75%), +12 Score (25%) if:</p>
+<ul>
+<li>Partner has Justified / Scraftinite  </li>
+<li>Partner has physical moves and not raised attack stat  </li>
+<li>Beat Up cannot faint the partner  </li>
+<li>Partner is first turn out</li>
+</ul>
+<h3 id="heal-pulse-floral-healing-pollen-puff">Heal Pulse, Floral Healing, Pollen Puff</h3>
+<p>If Partner is under half health and user is faster than both player mons: +6 Score</p>
+<h3 id="helping-hand">Helping Hand</h3>
+<p>If Partner move is not a status move: +7 Score (50%)</p>
+<h3 id="dragon-cheer">Dragon Cheer</h3>
+<ul>
+<li>+6 Score  </li>
+<li>If Partner is Dragon Type: +1 Score</li>
+</ul>
+<h3 id="coaching">Coaching</h3>
+<p>50% of the time:</p>
+<ul>
+<li>+1 Score (50%)  </li>
+<li>If partner attack stat &lt; +2: +1 Score (50%)  </li>
+<li>If partner defense stat &lt; +2: +1 Score (50%)</li>
+</ul>
+<h3 id="role-play">Role Play</h3>
+<p>If user doesn’t already have Huge Power or Pure Power and if partner has Huge Power, Pure Power or Illuminate: +10 Score (25%), +8 Score (75%)  </p>
+<h3 id="entrainment">Entrainment</h3>
+<p>If user has Huge Power and Partner doesn’t have Huge Power or Pure Power: +10 Score (25%), +8 Score (75%)</p>
+<h3 id="teatime">Teatime</h3>
+<ul>
+<li>-1 Score (50%)  </li>
+<li>If user or partner has pinch berries: +8 Score  </li>
+<li>Else if user or partner has a berry: +6 Score</li>
+</ul>
+<h3 id="instruct">Instruct</h3>
+<p>Starts at +6 Score and AI tries to evaluate the instructed move on the partner:</p>
+<ul>
+<li>If user is slower than partner, read the move the partner chose  </li>
+<li>If user is faster than partner, read the last used move of the partner</li>
+</ul>
+<p>If the evaluated move isn’t a status move and a spread move: +1 Score (50%)</p>
+<h3 id="acupressure-speed-swap">Acupressure, Speed Swap</h3>
+<p>+8 Score (25%), +0 Score (75%)</p>
+<h3 id="ally-switch">Ally Switch</h3>
+<p>20% of the time, if Player kills AI-Partner:</p>
+<ul>
+<li>If fast kill: +2 Score  </li>
+<li>If slow kill: +1 Score</li>
+</ul>
+<h3 id="follow-me-rage-powder">Follow Me, Rage Powder</h3>
+<p>If Player kills AI-Partner: +1 Score (50%)</p>
+<h3 id="round">Round</h3>
+<p>To understand Round AI, it is important to first understand how partner move scoring works in Double Battles.</p>
+<p>Score calculations are processed sequentially. The AI first calculates all move scores for Slot 1 without knowledge of what Slot 2 will select. Slot 2 then calculates its scores afterward, while being fully aware of Slot 1’s chosen move and resulting score.</p>
+<p>Round-specific scoring behaves as follows and stacks with HDM:</p>
+<p>90% of the time, if the AI is faster and its partner has access to Round:</p>
+<ul>
+<li>+7 Score  </li>
+<li>The partner’s Round score is overridden to +13</li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> If the faster Round user is in Slot 1, the partner in Slot 2 has not yet calculated its scores at the time of the override. As a result, the override has no effect in this scenario.</p>
+</blockquote>
+<p>If the AI is slower and its partner selects Round:</p>
+<ul>
+<li>The slower user receives a +13 score bonus.</li>
+</ul>
+<blockquote>
+<p><strong>Warning:</strong> If the slower Round user is in Slot 1, it cannot yet know whether Slot 2 will choose Round, since Slot 2 has not performed its calculations yet. To compensate for this limitation, the previously mentioned score override is applied instead.</p>
+</blockquote>
+<hr />
+<h2 id="extra-details">Extra Details</h2>
+<h3 id="should-ai-recover-function">Should AI Recover function</h3>
+<ul>
+<li>
+<p><strong>Recovery %:</strong>  </p>
+<ul>
+<li>Standard recovery moves (Recover, Slack Off, Heal Order, Roost, Strength Sap): 50%  </li>
+<li>Weather-based recovery moves (Morning Sun, Synthesis, Moonlight): 67%  </li>
+<li>Rest: 100%</li>
+</ul>
+</li>
+<li>
+<p>If AI mon is Toxic'd and move isn’t Rest:  </p>
+<ul>
+<li>Returns False  </li>
+</ul>
+</li>
+<li>
+<p>If player mon does as much or more damage than would be healed off:  </p>
+<ul>
+<li>Returns False  </li>
+<li><em>Note that this calculation uses the Recovery % listed above.</em></li>
+</ul>
+</li>
+<li>
+<p>If AI is faster:  </p>
+<ul>
+<li>If player mon can kill AI mon, but cannot after AI mon uses recovery move:  <ul>
+<li>Returns True  </li>
+</ul>
+</li>
+<li>If player mon cannot kill AI mon:  <ul>
+<li>If AI mon is below 66% and above 40%:  <ul>
+<li>Returns True (50%), Returns False (50%)  </li>
+</ul>
+</li>
+<li>If AI mon is below 40%:  <ul>
+<li>Returns True</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>If AI is slower:  </p>
+<ul>
+<li>If AI is below 70% HP:  <ul>
+<li>Returns True (75%), Returns False (25%)  </li>
+</ul>
+</li>
+<li>If AI is below 50% HP:  <ul>
+<li>Returns True  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>If none of the above cases are true, then this function defaults to return False.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
