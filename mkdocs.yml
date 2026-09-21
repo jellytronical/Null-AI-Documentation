@@ -5,7 +5,6 @@ theme:
     - scheme: slate
       primary: red
       accent: green
-  logo: material/controller-classic
 extra_css:
   - stylesheets/extra.css
 nav:
