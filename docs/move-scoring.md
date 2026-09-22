@@ -7,12 +7,6 @@ The rest of this document lists the possible move scores and the scenarios in wh
 
 The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a **-20 score penalty**. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.
 
-* [Damaging Moves](#damaging-moves)
-* [Offensive & Defensive Setup](#offensive-setup)
-* [Status Conditions (Sleep, Poison, Burn)](#sleep-sing-dark-void-yawn)
-* [Hazards & Terrain](#stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes)
-* [Double Battle Specifics](#double-battle-only)
-
 <a id="common-scores"></a>
 ## Common scores
 
@@ -146,7 +140,9 @@ Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Win
 
 <a id="choice-ai"></a>
 ## Choice AI
-If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
+If AI is holding a Choice Item: -20 Score to all status moves except:
+
+`Memento`, `Parting Shot`, `Baton Pass`, `Teleport`, `Chilly Reception`, `Sleep Talk`, `Me First`, `Copycat`, `Mimic`, `Transform`, `Sketch`, `Nature Power`, `Assist`, `Metronome`.
 
 <a id="should-ai-recover-function"></a>
 ## Should AI Recover function  

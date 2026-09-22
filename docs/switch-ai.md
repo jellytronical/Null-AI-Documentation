@@ -31,7 +31,7 @@ Additionally, the AI checks whether the Pokémon will take damage immediately up
 
 In almost all cases, the AI will only switch if the selected Pokémon has a non-negative switch-in score. If all available candidates have a score below 0, the AI will not switch. Similar to Post-KO Switch AI, each slot is evaluated independently in Double Battles.
 
-Some switch conditions require the *Avoid Switch* check to fail before they can trigger.
+Some switch conditions require the **Avoid Switch** check to fail before they can trigger.
 
 Avoid Switch is considered active if any of the following are true:
 
