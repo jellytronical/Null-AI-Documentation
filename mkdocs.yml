@@ -1,6 +1,9 @@
 site_name: Pokemon Null AI Documentation
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
   palette:
     - scheme: slate
       primary: red
@@ -18,3 +21,4 @@ nav:
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
 markdown_extensions:
   - admonition
+  
