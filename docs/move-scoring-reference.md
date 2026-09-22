@@ -3,9 +3,6 @@
 ### Moves that thaw the user
 If AI is frozen or frostbitten: +12 Score
 
-### Choice AI
-If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
-
 ### Rapid Spin  
 Treated as Speed Setup and additionally:
 

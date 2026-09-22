@@ -125,6 +125,9 @@ Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Win
 * If AI is faster: -20 Score  
 * If AI is slower: +1 Score (80%)
 
+## Choice AI
+If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
+
 ## Should AI Recover function  
 
 * **Recovery %:**  
