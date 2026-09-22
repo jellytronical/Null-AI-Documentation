@@ -157,13 +157,14 @@ Additionally, if it’s a Double Battle and the move is a damaging spread move: 
 * Else if AI HP > 60%, +1 Score (80%)  
 * Else if AI HP < 60%, -1 Score
 
-<a id="stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes"></a>
-### Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes
+<a id="stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes-hazards"></a>
+### Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes (Hazards)
 
 * If Player is on last mon: -10 Score  
 * If its AIs first turn and is not last mon: +2 Score (98%)  
-* $0.75 * \frac{AIAliveMons}{AITotalMons}$ of the time: +1 Score  
-  * Example: If AI has a total of 5 mons and 3 alive: $0.75 * \frac{3}{5} = 0.45 = 45\%$ which leads to +1 Score (45%)  
+* `0.75 * (AI Alive Mons / AI Total Mons)` of the time: +1 Score  
+  * Example: If the AI has a total of 5 Pokémon and 3 are alive:
+> `0.75 * (3 / 5)` = **0.45** (or **45%** chance) $\rightarrow$ leads to **+1 Score** (45%)[cite: 3] 
 * Additionally for (Toxic) Spikes: If there is 1 or more layers up: -1 Score (98%)
 
 <a id="sticky-web"></a>
