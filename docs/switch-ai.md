@@ -1,5 +1,7 @@
+<a id="switch-ai"></a>
 # Switch AI
 
+<a id="post-ko-switch-ai-scores"></a>
 ## Post-KO Switch AI Scores
 
 When the AI needs to switch in a Pokémon (after a faint or similar event), it calculates a switch-in score for each of its Pokémon against the player's active Pokémon. It will then send out the Pokémon with the highest score. In case of ties, it selects the first Pokémon in party order.  
@@ -24,6 +26,7 @@ Additionally, the AI checks whether the Pokémon will take damage immediately up
 -1: AI's Pokémon is slower and 2HKO’d  
 -2: AI's Pokémon is OHKO’d
 
+<a id="mid-turn-switch-ai"></a>
 ## Mid-Turn Switch AI
 
 In almost all cases, the AI will only switch if the selected Pokémon has a non-negative switch-in score. If all available candidates have a score below 0, the AI will not switch. Similar to Post-KO Switch AI, each slot is evaluated independently in Double Battles.
@@ -39,6 +42,7 @@ Avoid Switch is considered active if any of the following are true:
 Switch decisions are evaluated in priority order.  
 Earlier conditions override later ones.
 
+<a id="overview-of-switch-conditions"></a>
 ## Overview of Switch Conditions
 
 The AI will not switch out without a valid switch-in unless it’s:
@@ -58,17 +62,20 @@ The Avoid Switch check is used for the following AI’s:
 * [Anti-Stall AI](#anti-stall-ai)  
 * [Regenerator AI](#regenerator-ai)
 
+<a id="perish-song"></a>
 ### Perish Song
 
 * If AI is about to faint to Perish Song  
   * Guaranteed switch
 
+<a id="palafin"></a>
 ### Palafin
 
 * If AI is Palafin  
 * If AI is slower than the player and is OHKO’d  
   * Guaranteed switch
 
+<a id="anti-setup-ai"></a>
 ### Anti-Setup AI
 
 * If AI has been in for more than 1 turn  
@@ -76,6 +83,7 @@ The Avoid Switch check is used for the following AI’s:
   * 40% chance to switch  
   * Random tie-breaking between equal scores
 
+<a id="anti-setup-ai-plus"></a>
 ### Anti-Setup AI Plus
 
 * If AI has been active for more than 25 turns  
@@ -83,6 +91,7 @@ The Avoid Switch check is used for the following AI’s:
   * Random tie-breaking between equal scores  
   * Can switch to negative scores 
 
+<a id="walled-ai"></a>
 ### Walled AI
 
 * If AI cannot deal meaningful damage ( <= 10% of max HP, increased to 20% if the player has Leftovers, Black Sludge, Leech Seed or Poison Heal active)  
@@ -91,6 +100,7 @@ The Avoid Switch check is used for the following AI’s:
 * If it’s a Single Battle  
   * 20% chance to switch
 
+<a id="support-ai"></a>
 ### Support AI
 
 * If AI is a Support  
@@ -98,6 +108,7 @@ The Avoid Switch check is used for the following AI’s:
 * If Avoid Switch fails  
   * 20% chance to switch
 
+<a id="weather-ai"></a>
 ### Weather AI
 
 * If AI has a weather or terrain setting ability (e.g. Drought, Electric Surge)  
@@ -106,19 +117,22 @@ The Avoid Switch check is used for the following AI’s:
 * If Avoid Switch fails  
   * 20% chance to switch
 
+<a id="anti-stall-ai"></a>
 ### Anti-Stall AI
 
 * If AI has been in for more than 12 turns  
 * If Avoid Switch fails  
   * 20% chance to switch
 
+<a id="regenerator-ai"></a>
 ### Regenerator AI
 
 * If AI has Regenerator  
-* If $HP < \frac{maxHP * 2}{3}$  
+* If HP < (Max HP * 2/3)
 * If Avoid Switch fails  
   * 40% chance to switch
 
+<a id="immunity-ai"></a>
 ### Immunity AI
 
 * If AI has an immunity ability that grants an advantage (e.g. Water Absorb, Motor Drive, Wind Rider)  

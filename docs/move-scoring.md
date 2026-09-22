@@ -1,3 +1,4 @@
+<a id="move-scoring"></a>
 # Move scoring
 
 The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. 
@@ -6,6 +7,7 @@ The rest of this document lists the possible move scores and the scenarios in wh
 
 The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a **-20 score penalty**. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.
 
+<a id="common-scores"></a>
 ## Common scores
 
 | Move | Probability |
@@ -16,6 +18,7 @@ The AI also has a basic “useless move” check. For example, it won’t set St
 
 *AI sees speed ties as being faster than the player and priority move kill counts as a fast kill.
 
+<a id="damaging-moves"></a>
 ## Damaging moves
 
 AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: +6 (75%), +8 (25%)  
@@ -29,6 +32,7 @@ There are a few specific damaging moves that do not have their damage rolled nor
 * OHKO moves  
 * Feint, Upper Hand
 
+<a id="if-a-damaging-move-kills"></a>
 ### If a damaging move kills
 
 * If AI is faster or the move has priority and AI is slower: +6 Score  
@@ -37,6 +41,7 @@ There are a few specific damaging moves that do not have their damage rolled nor
   * The following moves receive a kill bonus, despite never being considered as HDM: Meteor Beam, Future Sight.  
 * If AI has Moxie, Beast Boost, Chilling Neigh, or Grim Neigh: +1 Score
 
+<a id="damaging-priority-moves-feint-excluded"></a>
 ### Damaging priority moves (Feint excluded)
 
 * If AI is slower and Player can faint AI:  
@@ -44,10 +49,12 @@ There are a few specific damaging moves that do not have their damage rolled nor
   * Else: +11 Score  
 * Else if AI is slower and has Eject Button: +11 Score
 
+<a id="score-priority-overview"></a>
 ## Score priority overview
 
 The following provides a high-level overview of how maximum move scores are prioritized within the AI logic. This list is not exhaustive and is only intended to illustrate the general hierarchy and relative score priority of different decision outcomes.
 
+<a id="tier-1"></a>
 ### Tier 1
 * Fast kill  
 * Palafin Flip Turn  
@@ -55,6 +62,7 @@ The following provides a high-level overview of how maximum move scores are prio
 * Damaging Gimmick moves (Feint, Upper Hand, Beat Up, Round, Weakness Policy activation, Pursuit, if user has a negative ability and target has a Mummy-like ability)  
 * Protect (For achieving form change gimmicks, e.g Power Construct, Stance Change, Zen Mode)  
 
+<a id="tier-2"></a>
 ### Tier 2
 * Slow kill  
 * Field moves:   
@@ -66,11 +74,13 @@ The following provides a high-level overview of how maximum move scores are prio
     * Coaching, Decorate  
 * Status Gimmick moves (Psych Up, Role Play, etc)  
 
+<a id="tier-3"></a>
 ### Tier 3
 * Highest Damage move (HDM)  
 * Status moves  
 * Damaging moves with guaranteed side-effects (doesn’t stack with HDM score)
 
+<a id="offensive-setup"></a>
 ## Offensive setup  
 Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
 
@@ -87,6 +97,7 @@ Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth
   * Player has a phazing move and AI is not on last mon  
 * If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)
 
+<a id="defensive-setup"></a>
 ## Defensive setup  
 Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash
 
@@ -106,6 +117,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
     * If Def or Sp. Def is lower than +1: +2 Score  
   * If AI has Stored Power or Body Press: +1 Score (50%)
 
+<a id="mixed-setup"></a>
 ## Mixed setup  
 No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
 Calm Mind, Quiver Dance
@@ -118,6 +130,7 @@ If a move boosts **special stats**, the logic is mirrored: it is treated as **De
 
 If the move is *Curse* and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.
 
+<a id="speed-setup"></a>
 ## Speed setup  
 Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot
 
@@ -125,9 +138,11 @@ Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Win
 * If AI is faster: -20 Score  
 * If AI is slower: +1 Score (80%)
 
+<a id="choice-ai"></a>
 ## Choice AI
 If AI is holding a Choice Item: -20 Score to all status moves except: Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
 
+<a id="should-ai-recover-function"></a>
 ## Should AI Recover function  
 
 * **Recovery %:**  

@@ -164,7 +164,7 @@ Additionally, if it’s a Double Battle and the move is a damaging spread move: 
 * If its AIs first turn and is not last mon: +2 Score (98%)  
 * `0.75 * (AI Alive Mons / AI Total Mons)` of the time: +1 Score  
   * Example: If the AI has a total of 5 Pokémon and 3 are alive:
-> `0.75 * (3 / 5)` = **0.45** (or **45%** chance) $\rightarrow$ leads to **+1 Score** (45%)[cite: 3] 
+> `0.75 * (3 / 5)` = **45%** for **+1 Score**
 * Additionally for (Toxic) Spikes: If there is 1 or more layers up: -1 Score (98%)
 
 <a id="sticky-web"></a>
@@ -172,7 +172,9 @@ Additionally, if it’s a Double Battle and the move is a damaging spread move: 
 
 * If Player is on last mon: -10 Score  
 * If its AIs first turn: +3 Score  
-* $0.75 * \frac{AIAliveMons}{AITotalMons}$ of the time: +1 Score
+* `0.75 * (AI Alive Mons / AI Total Mons)` of the time: +1 Score
+  * Example: If the AI has a total of 5 Pokémon and 3 are alive:
+> `0.75 * (3 / 5)` = **45%** for **+1 Score**
 
 <a id="tailwind"></a>
 ### Tailwind
@@ -191,10 +193,12 @@ Additionally, if it’s a Double Battle and the move is a damaging spread move: 
 <a id="explosion-moves-memento"></a>
 ### Explosion-Moves, Memento
 
-* If AI mon is at less than 10% HP: +10 Score  
-* Else if AI mon is at less than 33% HP: +8 Score (70%), +0 Score (30%)  
-* Else if AI mon is at less than 66% HP: +7 Score (50%), +0 Score (50%)  
-* Else: +7 Score (5%), +0 Score (95%)
+| AI HP | Scoring |
+| --- | --- |
+| < 10% | +10 Score |
+| < 33% | +8 Score (70%), +0 Score (30%) |
+| < 66% | +7 Score (50%), +0 Score (50%) |
+| Else | +7 Score (5%), +0 Score (95%) |
 
 Additionally:
 
