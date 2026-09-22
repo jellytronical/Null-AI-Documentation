@@ -707,10 +707,12 @@ Round-specific scoring behaves as follows and stacks with HDM:
 * +7 Score  
 * The partner’s Round score is overridden to +13
 
-> **Warning:** If the faster Round user is in Slot 1, the partner in Slot 2 has not yet calculated its scores at the time of the override. As a result, the override has no effect in this scenario.
+!!! warning
+    If the faster Round user is in Slot 1, the partner in Slot 2 has not yet calculated its scores at the time of the override. As a result, the override has no effect in this scenario.
 
 If the AI is slower and its partner selects Round:
 
 * The slower user receives a +13 score bonus.
 
-> **Warning:** If the slower Round user is in Slot 1, it cannot yet know whether Slot 2 will choose Round, since Slot 2 has not performed its calculations yet. To compensate for this limitation, the previously mentioned score override is applied instead.
+!!! warning
+    If the slower Round user is in Slot 1, it cannot yet know whether Slot 2 will choose Round, since Slot 2 has not performed its calculations yet. To compensate for this limitation, the previously mentioned score override is applied instead.
