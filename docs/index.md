@@ -4,7 +4,12 @@
 
 This document explains how the AI behaves during a turn. It is not fully exhaustive, and while I have done my best to ensure accuracy, mistakes, omissions, or outdated information may still be present. Most relevant cases are covered, but some moves and score values may be missing. If you notice something important that is incorrect, missing, or unclear, please contact Terra on Discord so it can be reviewed and updated.
 
-<div class="grid cards" markdown="1">
+<style>
+.grid.cards > ul {
+  list-style: none;
+  padding-left: 0;
+}
+</style>
 
 -   __Move Scoring__ :octicons-arrow-right-24: [View Move Scores](move-scoring.md)
 
@@ -30,4 +35,4 @@ This document explains how the AI behaves during a turn. It is not fully exhaust
 
     Clarifications on multi-hit checks, speed tier evaluations, and hidden mechanical quirks.
 
-</div>
+{.grid.cards}
