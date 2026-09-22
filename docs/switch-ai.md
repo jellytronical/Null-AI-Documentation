@@ -37,7 +37,26 @@ Avoid Switch is considered active if any of the following are true:
 * The player has Pursuit, phazing moves or OHKO moves
 
 Switch decisions are evaluated in priority order.  
-Earlier conditions override later ones. 
+Earlier conditions override later ones.
+
+## Overview of Switch Conditions
+
+The AI will not switch out without a valid switch-in unless it’s:
+
+* [Anti-Setup AI Plus](#anti-setup-ai-plus)
+
+The AI will send in the Pokemon with the highest Switchin Score, with Team order as a tiebreaker, except for:
+
+* [Anti-Setup AI](#anti-setup-ai)  
+* [Anti-Setup AI Plus](#anti-setup-ai-plus)
+
+The Avoid Switch check is used for the following AI’s:
+
+* [Walled AI](#walled-ai)  
+* [Support AI](#support-ai)  
+* [Weather AI](#weather-ai)  
+* [Anti-Stall AI](#anti-stall-ai)  
+* [Regenerator AI](#regenerator-ai)
 
 ### Perish Song
 
@@ -105,22 +124,3 @@ Earlier conditions override later ones.
 * If AI has an immunity ability that grants an advantage (e.g. Water Absorb, Motor Drive, Wind Rider)  
 * If Players last used move type corresponds to that immunity type  
   * 75% chance to switch
-
-## Overview of Switch Conditions
-
-The AI will not switch out without a valid switch-in unless it’s:
-
-* Anti-Setup AI Plus
-
-The AI will send in the Pokemon with the highest Switchin Score, with Team order as a tiebreaker, except for:
-
-* Anti-Setup AI  
-* Anti-Setup AI Plus
-
-The Avoid Switch check is used for the following AI’s:
-
-* Walled AI  
-* Support AI  
-* Weather AI  
-* Anti-Stall AI  
-* Regenerator AI
