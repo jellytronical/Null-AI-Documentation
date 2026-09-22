@@ -17,3 +17,12 @@
   color: #00ff66 !important;
   font-weight: bold;
 }
+
+/* Change text link colors to match the site's neon green */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #00ff66;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #33ff88;
+}
