@@ -18,6 +18,21 @@
   font-weight: bold;
 }
 
+/* Customize the Question admonition to use the site's neon green */
+[data-md-color-scheme="slate"] {
+  .md-typeset .question {
+    border-color: #00ff66;
+  }
+
+  .md-typeset .question > .admonition-title {
+    background-color: rgba(0, 255, 102, 0.1);
+  }
+
+  .md-typeset .question > .admonition-title::before {
+    background-color: #00ff66;
+  }
+}
+
 /* Change text link colors to match the site's neon green */
 [data-md-color-scheme="slate"] .md-typeset a {
   color: #00ff66;
