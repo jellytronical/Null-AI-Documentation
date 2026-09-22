@@ -1,10 +1,5 @@
 # Q&A
 
-
-!!! question "How does AI see multi-hit moves?"
-
-    AI usually sees 3 hits for both itself or Player. If the Pokémon has Loaded Dice or Skill Link, it’s 4 hits and 5 hits respectively.
-
 !!! question "How does AI see multi-hit moves?"
 
     AI usually sees 3 hits for both itself or Player. If the Pokémon has Loaded Dice or Skill Link, it’s 4 hits and 5 hits respectively.
