@@ -21,4 +21,5 @@ nav:
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
 markdown_extensions:
   - admonition
-  
+  - attr_list
+  - pymdownx.superfences
