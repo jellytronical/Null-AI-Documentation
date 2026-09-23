@@ -2,9 +2,10 @@
 # Switch AI
 
 <a id="post-ko-switch-ai-scores"></a>
-## Post-KO Switch AI Scores
+## Post-KO switch AI scores
 
 When the AI needs to switch in a Pokémon (after a faint or similar event), it calculates a switch-in score for each of its Pokémon against the player's active Pokémon. It will then send out the Pokémon with the highest score. In case of ties, it selects the first Pokémon in party order.  
+
 In *Double Battles*, each slot is evaluated independently: 
 
 * The AI’s first slot evaluates against the player’s first slot  
@@ -27,7 +28,7 @@ Additionally, the AI checks whether the Pokémon will take damage immediately up
 -2: AI's Pokémon is OHKO’d
 
 <a id="mid-turn-switch-ai"></a>
-## Mid-Turn Switch AI
+## Mid-turn switch AI
 
 In almost all cases, the AI will only switch if the selected Pokémon has a non-negative switch-in score. If all available candidates have a score below 0, the AI will not switch. Similar to Post-KO Switch AI, each slot is evaluated independently in Double Battles.
 

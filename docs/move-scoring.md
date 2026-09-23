@@ -142,7 +142,7 @@ Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Win
 ## Choice AI
 If AI is holding a Choice Item: -20 Score to all status moves except:
 
-`Memento`, `Parting Shot`, `Baton Pass`, `Teleport`, `Chilly Reception`, `Sleep Talk`, `Me First`, `Copycat`, `Mimic`, `Transform`, `Sketch`, `Nature Power`, `Assist`, `Metronome`.
+Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
 
 <a id="should-ai-recover-function"></a>
 ## Should AI Recover function  
