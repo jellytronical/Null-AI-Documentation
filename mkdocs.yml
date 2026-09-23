@@ -15,10 +15,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 nav:
-  - Overview: index.md
+  - Home: index.md
   - Switch AI: switch-ai.md
-  - Scoring: move-scoring.md
-  - Move scoring reference: move-scoring-reference.md
+  - - Move scoring:
+    - Overview: move-scoring.md
+    - Reference: move-scoring-reference.md
   - Support pokemon: support-pokemon.md
   - FAQ: faq.md
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
