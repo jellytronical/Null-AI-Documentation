@@ -1,6 +1,64 @@
 <a id="move-scoring-reference"></a>
 # Move scoring reference
 
+<a id="offensive-setup"></a>
+## Offensive setup  
+Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
+
+* If Player is incapacitated: +3 Score (90%)  
+* Else if Player kills AI in 4 or more hits  
+  * If Player is faster: +1 Score  
+  * If Player is slower: +2 Score  
+* If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  
+* If Player kills AI in 1 hit: -20 Score (Accounts for Disguise and Substitute)  
+* If Player fast kills AI in 2 hits: -5 Score (Accounts for Disguise)  
+* If the following applies: -5 Score:  
+  * Player has Burning Jealousy / Alluring Voice, AI is faster and move raises Attack  
+  * Player has Foul Play or a move that inflicts confusion and move raises Attack  
+  * Player has a phazing move and AI is not on last mon  
+* If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)
+
+<a id="defensive-setup"></a>
+## Defensive setup  
+Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash
+
+* If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  
+* If Player kills AI in 1 hit: -20 Score (Accounts for Disguise and Substitute)  
+* If Player fast kills AI in 2 hits: -5 Score (Accounts for Disguise)  
+* If Player has a phazing move and AI is not on last mon: -5 Score  
+* 80% of the time:  
+  * If Player is incapacitated: +2 Score (90%)  
+  * If Defense boost  
+    * If Player has physical moves and no special moves: +1 Score  
+    * If Def is +2 or higher and AI doesn’t have Body Press: -1 Score  
+  * If Special Defense boost:  
+    * If Player has special moves and no physical moves: +1 Score  
+    * If Sp. Def is +2 or higher and AI doesn’t have Stored Power: -1 Score  
+  * If Defense and Special Defense boost:  
+    * If Def or Sp. Def is lower than +1: +2 Score  
+  * If AI has Stored Power or Body Press: +1 Score (50%)
+
+<a id="mixed-setup"></a>
+## Mixed setup  
+No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
+Calm Mind, Quiver Dance
+
+Moves are categorized as either **Defensive Setup** or **Offensive Setup**, depending on the player's Pokémon moveset.
+
+If a move boosts **physical stats** (and No Retreat), it is treated as **Defensive Setup** when the player’s Pokémon has at least one physical attacking move and no special attacking moves. If the Pokémon has no physical attacking moves or includes at least one special attacking move, the move is treated as **Offensive Setup**.
+
+If a move boosts **special stats**, the logic is mirrored: it is treated as **Defensive Setup** when the player’s Pokémon has at least one special attacking move and no physical attacking moves. Otherwise, it is treated as **Offensive Setup**.
+
+If the move is *Curse* and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.
+
+<a id="speed-setup"></a>
+## Speed setup  
+Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot
+
+* If Player has Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  
+* If AI is faster: -20 Score  
+* If AI is slower: +1 Score (80%)
+
 <a id="moves-that-thaw-the-user"></a>
 #### Moves that thaw the user
 If AI is frozen or frostbitten: +12 Score
