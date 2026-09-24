@@ -1,4 +1,5 @@
-## Support pokémon
+<a id="support-pokemon"></a>
+# Support pokémon
 
 A Pokémon is classified as **Support** by the AI if it satisfies the following conditions:
 

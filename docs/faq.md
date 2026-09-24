@@ -1,4 +1,4 @@
-# Q&A
+# FAQ
 
 !!! question "How does AI see multi-hit moves?"
 

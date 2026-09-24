@@ -2,7 +2,7 @@
 # Move scoring reference
 
 <a id="offensive-setup"></a>
-## Offensive setup  
+#### Offensive setup  
 Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
 
 * If Player is incapacitated: +3 Score (90%)  
@@ -19,7 +19,7 @@ Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth
 * If the offensive stat (Atk/SpAtk) boosted by the move is +2 or higher: -1 Score (80%)
 
 <a id="defensive-setup"></a>
-## Defensive setup  
+#### Defensive setup  
 Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard, Shelter, Amnesia, Defense Curl, Stockpile, Cosmic Power, Psyshield Bash
 
 * If Player has Unaware, Haze, Clear Smog, Freezy Frost, or Topsy Turvy: -20 Score  
@@ -39,7 +39,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
   * If AI has Stored Power or Body Press: +1 Score (50%)
 
 <a id="mixed-setup"></a>
-## Mixed setup  
+#### Mixed setup  
 No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
 Calm Mind, Quiver Dance
 
@@ -52,7 +52,7 @@ If a move boosts **special stats**, the logic is mirrored: it is treated as **De
 If the move is *Curse* and the user is a Ghost Type, the move doesn’t follow setup rules and instead stays at the default +6 Score, if the target isn’t already cursed.
 
 <a id="speed-setup"></a>
-## Speed setup  
+#### Speed setup  
 Autotomize, Agility, Rock Polish, Trailblaze, Flame Charge, Aqua Step, Esper Wing, Scale Shot
 
 * If Player has Haze, Clear Smog, Freezy Frost, Topsy Turvy or a phazing move: -20 Score  
