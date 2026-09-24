@@ -3,7 +3,7 @@
 
 <a id="offensive-setup"></a>
 #### Offensive setup  
-Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary: Leaf Storm, Overheat, Draco Meteor
+Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Claws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary: Leaf Storm, Overheat, Draco Meteor
 
 * If Player is incapacitated: +3 Score (90%)  
 * Else if Player kills AI in 4 or more hits  
