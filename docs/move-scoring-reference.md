@@ -3,7 +3,7 @@
 
 <a id="offensive-setup"></a>
 #### Offensive setup  
-Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary Leaf Storm/Overheat/Draco Meteor
+Tidy Up, Dragon Dance, Shift Gear, Howl, Meditate, Sharpen, Swords Dance, Growth, Nasty Plot, Tail Glow, Hone Clws, Work Up, Power-Up Punch, Mystical Power, Torch Song, Contrary: Leaf Storm, Overheat, Draco Meteor
 
 * If Player is incapacitated: +3 Score (90%)  
 * Else if Player kills AI in 4 or more hits  
@@ -40,8 +40,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
 
 <a id="mixed-setup"></a>
 #### Mixed setup  
-No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower  
-Calm Mind, Quiver Dance
+No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary, Superpowerm, Calm Mind, Quiver Dance
 
 Moves are categorized as either **Defensive Setup** or **Offensive Setup**, depending on the player's Pokémon moveset.
 
@@ -319,7 +318,7 @@ AI fails the should set screen routine if the player has no physical move when R
 * If Player has Focus Band or Focus Sash/Sturdy active: -20 Score
 
 <a id="binding-moves-fire-spin-whirlpool-snap-trap"></a>
-#### Binding Moves (Fire Spin, Whirlpool, Snap Trap, etc.)
+#### Binding/Trapping Moves (Fire Spin, Whirlpool, Snap Trap, etc.)
 
 * If player is immune to trapping: -20 Score  
 * +6 Score (80%), +8 Score (20%)  
