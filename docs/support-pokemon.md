@@ -20,4 +20,4 @@ These moves are treated as utility and do **not** contribute toward the damaging
 * Speed control (e.g. Rock Tomb, Glaciate)  
 * Surf and Dive (only when the user is a Cramorant)
 
-The support class plays a notable role in some Switch decisions.
+The support class plays a notable role in some [Switch AI](switch-ai.md) decisions.

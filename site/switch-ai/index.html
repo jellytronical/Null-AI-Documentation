@@ -875,9 +875,25 @@
 </tbody>
 </table>
 <p>If the considered Pokémon is a <strong>Support</strong> and isn’t at -1 Score it gets an <em>additional +2 score 10% of the time</em>.</p>
-<p>Additionally, the AI checks whether the Pokémon will take damage immediately upon switching in (e.g. from fast Volt Switch or Eject Pack). If so:  <br />
--1: AI's Pokémon is slower and 2HKO’d<br />
--2: AI's Pokémon is OHKO’d</p>
+<p>Additionally, the AI checks whether the Pokémon will take damage immediately upon switching in (e.g. from fast Volt Switch or Eject Pack). If so:</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>AI's Pokémon is slower and 2HKO’d.</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>AI's Pokémon is OHKO’d.</td>
+</tr>
+</tbody>
+</table>
 <p><a id="mid-turn-switch-ai"></a></p>
 <h2 id="mid-turn-switch-ai">Mid-turn switch AI</h2>
 <p>In almost all cases, the AI will only switch if the selected Pokémon has a non-negative switch-in score. If all available candidates have a score below 0, the AI will not switch. Similar to Post-KO Switch AI, each slot is evaluated independently in Double Battles.</p>

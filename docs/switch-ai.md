@@ -23,9 +23,12 @@ In *Double Battles*, each slot is evaluated independently:
 
 If the considered Pokémon is a **Support** and isn’t at -1 Score it gets an *additional +2 score 10% of the time*.
 
-Additionally, the AI checks whether the Pokémon will take damage immediately upon switching in (e.g. from fast Volt Switch or Eject Pack). If so:    
--1: AI's Pokémon is slower and 2HKO’d  
--2: AI's Pokémon is OHKO’d
+Additionally, the AI checks whether the Pokémon will take damage immediately upon switching in (e.g. from fast Volt Switch or Eject Pack). If so:
+
+| Score | Condition |
+| --- | --- |
+| -1 | AI's Pokémon is slower and 2HKO’d. |
+| -2 | AI's Pokémon is OHKO’d. |
 
 <a id="mid-turn-switch-ai"></a>
 ## Mid-turn switch AI

@@ -21,8 +21,10 @@ The AI also has a basic “useless move” check. For example, it won’t set St
 <a id="damaging-moves"></a>
 ## Damaging moves
 
-AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: +6 (75%), +8 (25%)  
+AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: **+6 (75%), +8 (25%)**  
+
 If multiple moves kill, then they are all considered HDM and all get this score.  
+
 There are a few specific damaging moves that do not have their damage rolled normally and are thus never considered HDM. These moves are:
 
 * Explosion, Self-Destruct, Misty Explosion  
