@@ -7,7 +7,7 @@ This document explains how the AI behaves during a turn. It is not fully exhaust
 | Page | Description |
 | --- | --- |
 | [Switch AI](switch-ai.md) | Explains how the AI evaluates and selects Pokémon to switch in. |
-| [Support Pokémon](support-pokemon.md) | Defines how the AI classifies a Pokémon as a support. |
+| [Support pokémon](support-pokemon.md) | Defines how the AI classifies a Pokémon as a support. |
 | [Move scoring overview](move-scoring.md) | Explains how the AI scores moves and chooses what to use each turn. |
 | [Scoring reference](move-scoring-reference.md) | An extensive list of score conditions used for specific moves. |
 | [FAQ](faq.md) | Answers to frequently asked questions about the AI. |

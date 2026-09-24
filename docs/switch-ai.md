@@ -6,10 +6,11 @@
 
 When the AI needs to switch in a Pokémon (after a faint or similar event), it calculates a switch-in score for each of its Pokémon against the player's active Pokémon. It will then send out the Pokémon with the highest score. In case of ties, it selects the first Pokémon in party order.  
 
-In *Double Battles*, each slot is evaluated independently: 
+!!! note
+    In **Double Battles**, each slot is evaluated independently:
 
-* The AI’s first slot evaluates against the player’s first slot  
-* The AI’s second slot evaluates against the player’s second slot 
+    * The AI’s first slot evaluates against the player’s first slot
+    * The AI’s second slot evaluates against the player’s second slot
 
 | Score | Condition |
 | --- | --- |
