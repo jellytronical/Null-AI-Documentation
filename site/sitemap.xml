@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jellytronical.github.io/Null-AI-Documentation/</loc>
-         <lastmod>2026-09-21</lastmod>
+         <lastmod>2026-09-24</lastmod>
     </url>
     <url>
-         <loc>https://jellytronical.github.io/Null-AI-Documentation/Move%20scoring/</loc>
-         <lastmod>2026-09-21</lastmod>
+         <loc>https://jellytronical.github.io/Null-AI-Documentation/faq/</loc>
+         <lastmod>2026-09-24</lastmod>
     </url>
     <url>
-         <loc>https://jellytronical.github.io/Null-AI-Documentation/QA/</loc>
-         <lastmod>2026-09-21</lastmod>
+         <loc>https://jellytronical.github.io/Null-AI-Documentation/move-scoring-reference/</loc>
+         <lastmod>2026-09-24</lastmod>
     </url>
     <url>
-         <loc>https://jellytronical.github.io/Null-AI-Documentation/Support%20pokemon/</loc>
-         <lastmod>2026-09-21</lastmod>
+         <loc>https://jellytronical.github.io/Null-AI-Documentation/move-scoring/</loc>
+         <lastmod>2026-09-24</lastmod>
     </url>
     <url>
-         <loc>https://jellytronical.github.io/Null-AI-Documentation/Switch%20AI/</loc>
-         <lastmod>2026-09-21</lastmod>
+         <loc>https://jellytronical.github.io/Null-AI-Documentation/support-pokemon/</loc>
+         <lastmod>2026-09-24</lastmod>
+    </url>
+    <url>
+         <loc>https://jellytronical.github.io/Null-AI-Documentation/switch-ai/</loc>
+         <lastmod>2026-09-24</lastmod>
     </url>
 </urlset>

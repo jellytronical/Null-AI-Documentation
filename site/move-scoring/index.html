@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://jellytronical.github.io/Null-AI-Documentation/Switch%20AI/">
+        <link rel="canonical" href="https://jellytronical.github.io/Null-AI-Documentation/move-scoring/">
       
       
-        <link rel="prev" href="../Support%20pokemon/">
+        <link rel="prev" href="../support-pokemon/">
       
       
-        <link rel="next" href="../Move%20scoring/">
+        <link rel="next" href="../move-scoring-reference/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Switch AI - Null AI Documentation</title>
+        <title>Overview - Pokemon Null AI Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#switch-ai" class="md-skip">
+        <a href="#move-scoring-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Null AI Documentation" class="md-header__button md-logo" aria-label="Null AI Documentation" data-md-component="logo">
+    <a href=".." title="Pokemon Null AI Documentation" class="md-header__button md-logo" aria-label="Pokemon Null AI Documentation" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -107,13 +107,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Null AI Documentation
+            Pokemon Null AI Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Switch AI
+              Overview
             
           </span>
         </div>
@@ -162,6 +162,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -203,12 +205,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Null AI Documentation" class="md-nav__button md-logo" aria-label="Null AI Documentation" data-md-component="logo">
+    <a href=".." title="Pokemon Null AI Documentation" class="md-nav__button md-logo" aria-label="Pokemon Null AI Documentation" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Null AI Documentation
+    Pokemon Null AI Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -227,7 +229,7 @@
   <span class="md-ellipsis">
     
   
-    Null AI Overview
+    Home
   
 
     
@@ -247,7 +249,34 @@
   
   
     <li class="md-nav__item">
-      <a href="../Support%20pokemon/" class="md-nav__link">
+      <a href="../switch-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-pokemon/" class="md-nav__link">
         
   
   
@@ -275,6 +304,60 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Move scoring
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Move scoring
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -290,7 +373,7 @@
   <span class="md-ellipsis">
     
   
-    Switch AI
+    Overview
   
 
     
@@ -308,7 +391,7 @@
   <span class="md-ellipsis">
     
   
-    Switch AI
+    Overview
   
 
     
@@ -334,10 +417,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#post-ko-switch-ai-scores" class="md-nav__link">
+  <a href="#common-scores" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Post-KO Switch AI Scores
+        Common scores
       
     </span>
   </a>
@@ -345,22 +428,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mid-turn-switch-ai" class="md-nav__link">
+  <a href="#damaging-moves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mid-Turn Switch AI
+        Damaging moves
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mid-Turn Switch AI">
+    <nav class="md-nav" aria-label="Damaging moves">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#perish-song" class="md-nav__link">
+  <a href="#if-a-damaging-move-kills" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Perish Song
+        If a damaging move kills
       
     </span>
   </a>
@@ -368,98 +451,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#palafin" class="md-nav__link">
+  <a href="#damaging-priority-moves-feint-excluded" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Palafin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-setup-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Setup AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-setup-ai-plus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Setup AI Plus
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#walled-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Walled AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Support AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weather-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weather AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-stall-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Stall AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regenerator-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regenerator AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#immunity-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Immunity AI
+        Damaging priority moves (Feint excluded)
       
     </span>
   </a>
@@ -472,10 +467,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-of-switch-conditions" class="md-nav__link">
+  <a href="#score-priority-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Switch Conditions
+        Score priority overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Score priority overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#should-ai-recover-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should AI Recover function
       
     </span>
   </a>
@@ -489,22 +545,23 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../Move%20scoring/" class="md-nav__link">
+      <a href="../move-scoring-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Move scoring
+    Scoring reference
   
 
     
@@ -516,6 +573,14 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -524,14 +589,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../QA/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Q&A
+    FAQ
   
 
     
@@ -571,10 +636,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#post-ko-switch-ai-scores" class="md-nav__link">
+  <a href="#common-scores" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Post-KO Switch AI Scores
+        Common scores
       
     </span>
   </a>
@@ -582,22 +647,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mid-turn-switch-ai" class="md-nav__link">
+  <a href="#damaging-moves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mid-Turn Switch AI
+        Damaging moves
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mid-Turn Switch AI">
+    <nav class="md-nav" aria-label="Damaging moves">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#perish-song" class="md-nav__link">
+  <a href="#if-a-damaging-move-kills" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Perish Song
+        If a damaging move kills
       
     </span>
   </a>
@@ -605,98 +670,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#palafin" class="md-nav__link">
+  <a href="#damaging-priority-moves-feint-excluded" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Palafin
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-setup-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Setup AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-setup-ai-plus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Setup AI Plus
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#walled-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Walled AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Support AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#weather-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Weather AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#anti-stall-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Anti-Stall AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regenerator-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Regenerator AI
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#immunity-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Immunity AI
+        Damaging priority moves (Feint excluded)
       
     </span>
   </a>
@@ -709,10 +686,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview-of-switch-conditions" class="md-nav__link">
+  <a href="#score-priority-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Switch Conditions
+        Score priority overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Score priority overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choice-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choice AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#should-ai-recover-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should AI Recover function
       
     </span>
   </a>
@@ -736,125 +774,153 @@
 
 
 
-<h1 id="switch-ai">Switch AI</h1>
-<h2 id="post-ko-switch-ai-scores">Post-KO Switch AI Scores</h2>
-<p>When the AI needs to switch in a Pokémon (after a faint or similar event), it calculates a switch-in score for each of its Pokémon against the player's active Pokémon. It will then send out the Pokémon with the highest score. In case of ties, it selects the first Pokémon in party order.<br />
-In <em>Double Battles</em>, each slot is evaluated independently: </p>
+<p><a id="move-scoring"></a></p>
+<h1 id="move-scoring-overview">Move scoring overview</h1>
+<p>The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. </p>
+<p>The rest of this document lists the possible move scores and the scenarios in which they apply. As a general rule, <strong>non-attacking moves default to a score of +6</strong>, tied with the highest-damage move (HDM). Exceptions include Nature Power and Memento. Most moves with guaranteed secondary effects (accounting for Serene Grace boosts) and accuracy above 70 (to avoid edge cases like Zap Cannon in Nuzzle AI) also use the +6 base score and follow the behavior of their corresponding status move (e.g. Mystical Fire is treated like Confide). However, these moves do not receive the +6 bonus and do not follow their corresponding AI (unless explicitly stated otherwise) if they are already functioning as the HDM. Future Sight also starts with a default score of +6.</p>
+<p>The AI also has a basic “useless move” check. For example, it won’t set Stealth Rock if it’s already active, or attempt to inflict a status that is already present. In these cases, the move usually receives a <strong>-20 score penalty</strong>. Not every edge case is listed here, since most are intuitive and including them would add unnecessary bulk. Any non-obvious exceptions will be explicitly noted.</p>
+<p><a id="common-scores"></a></p>
+<h2 id="common-scores">Common scores</h2>
+<table>
+<thead>
+<tr>
+<th>Move</th>
+<th>Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Highest damaging move (HDM)</strong></td>
+<td>+6 (75%), +8 (25%)</td>
+</tr>
+<tr>
+<td><strong>Slow kill</strong> (AI kills but is slower than target)</td>
+<td>+9 (75%), +11 (25%)</td>
+</tr>
+<tr>
+<td><strong>Fast kill</strong> (AI kills and is faster* than target)</td>
+<td>+12 (75%), +14 (25%)</td>
+</tr>
+</tbody>
+</table>
+<p>*AI sees speed ties as being faster than the player and priority move kill counts as a fast kill.</p>
+<p><a id="damaging-moves"></a></p>
+<h2 id="damaging-moves">Damaging moves</h2>
+<p>AI will roll a random damage value for all of its attacking moves, and the highest damaging move (HDM) gets the following score: +6 (75%), +8 (25%)<br />
+If multiple moves kill, then they are all considered HDM and all get this score.<br />
+There are a few specific damaging moves that do not have their damage rolled normally and are thus never considered HDM. These moves are:</p>
 <ul>
-<li>The AI’s first slot evaluates against the player’s first slot  </li>
-<li>The AI’s second slot evaluates against the player’s second slot </li>
+<li>Explosion, Self-Destruct, Misty Explosion  </li>
+<li>Final Gambit  </li>
+<li>Meteor Beam   </li>
+<li>Future Sight  </li>
+<li>OHKO moves  </li>
+<li>Feint, Upper Hand</li>
 </ul>
-<p>+5: AI's Pokémon is faster than the player’s and OHKOs it.<br />
-+4: AI's Pokémon is slower than the player’s and OHKOs it. <br />
-      (Or AI considers Palafin-Zero)<br />
-+3: AI's Pokémon is faster than the player's and KOs in &lt;= hits.<br />
-      (Or AI considers Imposter Ditto)<br />
-+2: AI's Pokémon is slower than the player's and KOs in &lt; hits.<br />
-      (Or AI considers Wynaut or Wobbuffet)<br />
-+1: AI's Pokémon is faster than the player's.<br />
-  0: Default<br />
- -1: AI's Pokémon is slower than the player's and is OHKO’d.<br />
-      (If Imposter Ditto is considered, this check is skipped.)</p>
-<p>If the considered Pokémon is a <strong>Support</strong> and isn’t at -1 Score it gets an <em>additional +2 score 10% of the time</em>.</p>
-<p>Additionally, the AI checks whether the Pokémon will take damage immediately upon switching in (e.g. from fast Volt Switch or Eject Pack). If so:  <br />
--1: AI's Pokémon is slower and 2HKO’d<br />
--2: AI's Pokémon is OHKO’d</p>
-<h2 id="mid-turn-switch-ai">Mid-Turn Switch AI</h2>
-<p>In almost all cases, the AI will only switch if the selected Pokémon has a non-negative switch-in score. If all available candidates have a score below 0, the AI will not switch. Similar to Post-KO Switch AI, each slot is evaluated independently in Double Battles.</p>
-<p>Some switch conditions require the <em>Avoid Switch</em> check to fail before they can trigger.</p>
-<p>Avoid Switch is considered active if any of the following are true:</p>
+<p><a id="if-a-damaging-move-kills"></a></p>
+<h3 id="if-a-damaging-move-kills">If a damaging move kills</h3>
 <ul>
-<li>The AI has boosted stats  </li>
-<li>The AI can KO one of the player’s Pokémon  </li>
-<li>The player has Pursuit, phazing moves or OHKO moves</li>
+<li>If AI is faster or the move has priority and AI is slower: +6 Score  </li>
+<li>If AI is slower: +3 Score  </li>
+<li>The following moves do not receive a kill bonus: Explosion, Self-Destruct, Misty Explosion, Final Gambit, Rollout, Ice Ball, OHKO moves  </li>
+<li>The following moves receive a kill bonus, despite never being considered as HDM: Meteor Beam, Future Sight.  </li>
+<li>If AI has Moxie, Beast Boost, Chilling Neigh, or Grim Neigh: +1 Score</li>
 </ul>
-<p>Switch decisions are evaluated in priority order.<br />
-Earlier conditions override later ones. </p>
-<h3 id="perish-song">Perish Song</h3>
+<p><a id="damaging-priority-moves-feint-excluded"></a></p>
+<h3 id="damaging-priority-moves-feint-excluded">Damaging priority moves (Feint excluded)</h3>
 <ul>
-<li>If AI is about to faint to Perish Song  </li>
-<li>Guaranteed switch</li>
+<li>If AI is slower and Player can faint AI:  </li>
+<li>If the priority move is also HDM: +5 Score  </li>
+<li>Else: +11 Score  </li>
+<li>Else if AI is slower and has Eject Button: +11 Score</li>
 </ul>
-<h3 id="palafin">Palafin</h3>
+<p><a id="score-priority-overview"></a></p>
+<h2 id="score-priority-overview">Score priority overview</h2>
+<p>The following provides a high-level overview of how maximum move scores are prioritized within the AI logic. This list is not exhaustive and is only intended to illustrate the general hierarchy and relative score priority of different decision outcomes.</p>
+<p><a id="tier-1"></a></p>
+<h3 id="tier-1">Tier 1</h3>
 <ul>
-<li>If AI is Palafin  </li>
-<li>If AI is slower than the player and is OHKO’d  </li>
-<li>Guaranteed switch</li>
+<li>Fast kill  </li>
+<li>Palafin Flip Turn  </li>
+<li>If frozen: Moves that thaw the user  </li>
+<li>Damaging Gimmick moves (Feint, Upper Hand, Beat Up, Round, Weakness Policy activation, Pursuit, if user has a negative ability and target has a Mummy-like ability)  </li>
+<li>Protect (For achieving form change gimmicks, e.g Power Construct, Stance Change, Zen Mode)  </li>
 </ul>
-<h3 id="anti-setup-ai">Anti-Setup AI</h3>
+<p><a id="tier-2"></a></p>
+<h3 id="tier-2">Tier 2</h3>
 <ul>
-<li>If AI has been in for more than 1 turn  </li>
-<li>If all moves are useless  </li>
-<li>40% chance to switch  </li>
-<li>Random tie-breaking between equal scores</li>
+<li>Slow kill  </li>
+<li>Field moves:   <ul>
+<li>Trick Room, Wonder Room, Magic Room, Gravity, Mud Sport, Water Sport  </li>
+<li>Hazards, Tailwind  </li>
 </ul>
-<h3 id="anti-setup-ai-plus">Anti-Setup AI Plus</h3>
+</li>
+<li>With Power Herb: 2-turn moves with powerful side effects (Geomancy, Meteor Beam, Electro Shot, Sky Attack, Freeze Shock, Ice Burn)  </li>
+<li>Boosting a partners stats  <ul>
+<li>Swagger and Flatter if the partner will not be confused  </li>
+<li>Coaching, Decorate  </li>
+</ul>
+</li>
+<li>Status Gimmick moves (Psych Up, Role Play, etc)  </li>
+</ul>
+<p><a id="tier-3"></a></p>
+<h3 id="tier-3">Tier 3</h3>
 <ul>
-<li>If AI has been active for more than 25 turns  </li>
-<li>40% chance to switch  </li>
-<li>Random tie-breaking between equal scores  </li>
-<li>Can switch to negative scores </li>
+<li>Highest Damage move (HDM)  </li>
+<li>Status moves  </li>
+<li>Damaging moves with guaranteed side-effects (doesn’t stack with HDM score)</li>
 </ul>
-<h3 id="walled-ai">Walled AI</h3>
+<p><a id="choice-ai"></a></p>
+<h2 id="choice-ai">Choice AI</h2>
+<p>If AI is holding a Choice Item: -20 Score to all status moves except:</p>
+<p>Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.</p>
+<p><a id="should-ai-recover-function"></a></p>
+<h2 id="should-ai-recover-function">Should AI Recover function</h2>
+<p>The function first checks whether recovery is worthwhile, then evaluates the AI's
+speed and remaining HP.</p>
+<table>
+<thead>
+<tr>
+<th>Recovery move</th>
+<th style="text-align: right;">Recovery used for the calculation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard recovery (Recover, Slack Off, Heal Order, Roost, Strength Sap)</td>
+<td style="text-align: right;">50%</td>
+</tr>
+<tr>
+<td>Weather-based recovery (Morning Sun, Synthesis, Moonlight)</td>
+<td style="text-align: right;">67%</td>
+</tr>
+<tr>
+<td>Rest</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Return <code>False</code> when:</strong></p>
 <ul>
-<li>If AI cannot deal meaningful damage ( &lt;= 10% of max HP, increased to 20% if the player has Leftovers, Black Sludge, Leech Seed or Poison Heal active)  </li>
-<li>If AI has been in for more than 5 turns  </li>
-<li>If Avoid Switch fails  </li>
-<li>If it’s a Single Battle  </li>
-<li>20% chance to switch</li>
+<li>The AI mon is <strong>Toxic'd</strong> and the move is not Rest.</li>
+<li>The player's mon deals at least as much damage as the recovery move would heal.</li>
 </ul>
-<h3 id="support-ai">Support AI</h3>
+<blockquote>
+<p>The damage comparison uses the recovery percentage listed above.</p>
+</blockquote>
+<p><strong>If the AI is faster:</strong></p>
 <ul>
-<li>If AI is a Support  </li>
-<li>If AI has been in for more than 1 turn  </li>
-<li>If Avoid Switch fails  </li>
-<li>20% chance to switch</li>
+<li>If the player's mon can currently KO the AI mon but cannot KO it after recovery, return <code>True</code>.</li>
+<li>If the player's mon cannot KO the AI mon:</li>
+<li>Between 40% and 66% HP: return <code>True</code> 50% of the time and <code>False</code> 50% of the time.</li>
+<li>Below 40% HP: return <code>True</code>.</li>
 </ul>
-<h3 id="weather-ai">Weather AI</h3>
+<p><strong>If the AI is slower:</strong></p>
 <ul>
-<li>If AI has a weather or terrain setting ability (e.g. Drought, Electric Surge)  </li>
-<li>If the corresponding weather or terrain faded  </li>
-<li>If AI has been in for more than 1 turn  </li>
-<li>If Avoid Switch fails  </li>
-<li>20% chance to switch</li>
+<li>Below 70% HP: return <code>True</code> 75% of the time and <code>False</code> 25% of the time.</li>
+<li>Below 50% HP: return <code>True</code>.</li>
 </ul>
-<h3 id="anti-stall-ai">Anti-Stall AI</h3>
-<ul>
-<li>If AI has been in for more than 12 turns  </li>
-<li>If Avoid Switch fails  </li>
-<li>20% chance to switch</li>
-</ul>
-<h3 id="regenerator-ai">Regenerator AI</h3>
-<ul>
-<li>If AI has Regenerator  </li>
-<li>If $HP &lt; \frac{maxHP * 2}{3}$  </li>
-<li>If Avoid Switch fails  </li>
-<li>40% chance to switch</li>
-</ul>
-<h3 id="immunity-ai">Immunity AI</h3>
-<ul>
-<li>If AI has an immunity ability that grants an advantage (e.g. Water Absorb, Motor Drive, Wind Rider)  </li>
-<li>If Players last used move type corresponds to that immunity type  </li>
-<li>75% chance to switch</li>
-</ul>
-<h2 id="overview-of-switch-conditions">Overview of Switch Conditions</h2>
-<p>The AI will not switch out without a valid switch-in unless it’s:</p>
-<ul>
-<li>Anti-Setup AI Plus</li>
-</ul>
-<p>The AI will send in the Pokemon with the highest Switchin Score, with Team order as a tiebreaker, except for:</p>
-<ul>
-<li>Anti-Setup AI  </li>
-<li>Anti-Setup AI Plus</li>
-</ul>
-<p>The Avoid Switch check is used for the following AI’s:</p>
-<ul>
-<li>Walled AI  </li>
-<li>Support AI  </li>
-<li>Weather AI  </li>
-<li>Anti-Stall AI  </li>
-<li>Regenerator AI</li>
-</ul>
+<p>If none of these conditions apply, the function returns <code>False</code>.</p>
 
 
 
@@ -904,7 +970,7 @@ Earlier conditions override later ones. </p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

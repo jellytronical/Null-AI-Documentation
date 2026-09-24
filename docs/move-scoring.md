@@ -1,5 +1,5 @@
 <a id="move-scoring"></a>
-# Move scoring
+# Move scoring overview
 
 The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. 
 
@@ -87,32 +87,34 @@ If AI is holding a Choice Item: -20 Score to all status moves except:
 Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
 
 <a id="should-ai-recover-function"></a>
-## Should AI Recover function  
+## Should AI Recover function
 
-* **Recovery %:**  
-    * Standard recovery moves (Recover, Slack Off, Heal Order, Roost, Strength Sap): 50%  
-    * Weather-based recovery moves (Morning Sun, Synthesis, Moonlight): 67%  
-    * Rest: 100%
+The function first checks whether recovery is worthwhile, then evaluates the AI's
+speed and remaining HP.
 
-* If AI mon is Toxic'd and move isn’t Rest:  
-    * Returns False  
-* If player mon does as much or more damage than would be healed off:  
-    * Returns False  
-    * *Note that this calculation uses the Recovery % listed above.*
+| Recovery move | Recovery amount used for the calculation |
+| --- | ---: |
+| Standard recovery (Recover, Slack Off, Heal Order, Roost, Strength Sap) | 50% |
+| Weather-based recovery (Morning Sun, Synthesis, Moonlight) | 67% |
+| Rest | 100% |
 
-* If AI is faster:  
-    * If player mon can kill AI mon, but cannot after AI mon uses recovery move:  
-        * Returns True  
-    * If player mon cannot kill AI mon:  
-        * If AI mon is below 66% and above 40%:  
-            * Returns True (50%), Returns False (50%)  
-        * If AI mon is below 40%:  
-            * Returns True
+**Return `False` when:**
 
-* If AI is slower:  
-    * If AI is below 70% HP:  
-        * Returns True (75%), Returns False (25%)  
-    * If AI is below 50% HP:  
-        * Returns True  
-          
-* If none of the above cases are true, then this function defaults to return False.
+- The AI mon is **Toxic'd** and the move is not Rest.
+- The player's mon deals at least as much damage as the recovery move would heal.
+
+The damage comparison uses the recovery percentage listed above.
+
+**If the AI is faster:**
+
+- If the player's mon can currently KO the AI mon but cannot KO it after recovery, return `True`.
+- If the player's mon cannot KO the AI mon:
+  - Between 40% and 66% HP: return `True` 50% of the time and `False` 50% of the time.
+  - Below 40% HP: return `True`.
+
+**If the AI is slower:**
+
+- Below 70% HP: return `True` 75% of the time and `False` 25% of the time.
+- Below 50% HP: return `True`.
+
+If none of these conditions apply, the function returns `False`.
