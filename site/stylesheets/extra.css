@@ -18,18 +18,21 @@
   font-weight: bold;
 }
 
-/* Question admonition */
+/* Question admonition styling */
 [data-md-color-scheme="slate"] {
-  .md-typeset .question {
+  .md-typeset .admonition.question,
+  .md-typeset details.question {
     background-color: rgba(99, 102, 241, 0.05); /* Soft indigo-tinted matte body */
     border-color: #6366f1;                      /* Balanced slate-indigo border */
   }
 
-  .md-typeset .question > .admonition-title {
+  .md-typeset .admonition.question > .admonition-title,
+  .md-typeset details.question > summary {
     background-color: rgba(99, 102, 241, 0.12);  /* Slightly deeper title tint */
   }
 
-  .md-typeset .question > .admonition-title::before {
+  .md-typeset .admonition.question > .admonition-title::before,
+  .md-typeset details.question > summary::before {
     background-color: #6366f1;                  /* Matching accent icon */
   }
 }
