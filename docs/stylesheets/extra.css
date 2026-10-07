@@ -18,19 +18,22 @@
   font-weight: bold;
 }
 
-/* Customize the Question admonition to use the site's neon green */
-[data-md-color-scheme="slate"] {
-  .md-typeset .question {
-    border-color: #00ff66;
-  }
+/* Question admonition styling */
+[data-md-color-scheme="slate"] .md-typeset .admonition.question,
+[data-md-color-scheme="slate"] .md-typeset details.question {
+  background-color: rgba(122, 184, 163, 0.08); /* Soft sage-tinted matte body */
+  border-color: #8db6a5; /* Calm muted green-teal border */
+}
 
-  .md-typeset .question > .admonition-title {
-    background-color: rgba(0, 255, 102, 0.1);
-  }
+[data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.question > summary {
+  background-color: rgba(122, 184, 163, 0.14); /* Slightly deeper title tint */
+  border-bottom: 1px solid rgba(141, 182, 165, 0.45);
+}
 
-  .md-typeset .question > .admonition-title::before {
-    background-color: #00ff66;
-  }
+[data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset details.question > summary::before {
+  background-color: #8db6a5; /* Matching calm accent icon */
 }
 
 /* Change text link colors to match the site's neon green */

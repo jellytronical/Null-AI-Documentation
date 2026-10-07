@@ -11,7 +11,7 @@
   --md-primary-fg-color--light: #7a0909 !important;
 }
 
-/* Neon green and bold styling to both the main nav and the in-page table of contents active items */
+/* Apply neon green and bold styling to both the main nav and the in-page table of contents active items */
 [data-md-color-scheme="slate"] .md-nav__list .md-nav__item--active > .md-nav__link,
 [data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav__link--active {
   color: #00ff66 !important;
@@ -19,25 +19,24 @@
 }
 
 /* Question admonition styling */
-[data-md-color-scheme="slate"] {
-  .md-typeset .admonition.question,
-  .md-typeset details.question {
-    background-color: rgba(99, 102, 241, 0.05); /* Soft indigo-tinted matte body */
-    border-color: #6366f1;                      /* Balanced slate-indigo border */
-  }
-
-  .md-typeset .admonition.question > .admonition-title,
-  .md-typeset details.question > summary {
-    background-color: rgba(99, 102, 241, 0.12);  /* Slightly deeper title tint */
-  }
-
-  .md-typeset .admonition.question > .admonition-title::before,
-  .md-typeset details.question > summary::before {
-    background-color: #6366f1;                  /* Matching accent icon */
-  }
+[data-md-color-scheme="slate"] .md-typeset .admonition.question,
+[data-md-color-scheme="slate"] .md-typeset details.question {
+  background-color: rgba(122, 184, 163, 0.08); /* Soft sage-tinted matte body */
+  border-color: #8db6a5; /* Calm muted green-teal border */
 }
 
-/* Neon green text link colors */
+[data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset details.question > summary {
+  background-color: rgba(122, 184, 163, 0.14); /* Slightly deeper title tint */
+  border-bottom: 1px solid rgba(141, 182, 165, 0.45);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title::before,
+[data-md-color-scheme="slate"] .md-typeset details.question > summary::before {
+  background-color: #8db6a5; /* Matching calm accent icon */
+}
+
+/* Change text link colors to match the site's neon green */
 [data-md-color-scheme="slate"] .md-typeset a {
   color: #00ff66;
 }
