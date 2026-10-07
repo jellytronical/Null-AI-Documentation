@@ -21,19 +21,26 @@
 /* Question admonition styling */
 [data-md-color-scheme="slate"] .md-typeset .admonition.question,
 [data-md-color-scheme="slate"] .md-typeset details.question {
-  background-color: rgba(122, 184, 163, 0.08); /* Soft sage-tinted matte body */
-  border-color: #8db6a5; /* Calm muted green-teal border */
+  background-color: #8db6a5;
+  border-color: #8db6a5;
+  color: #1b2d2a;
 }
 
 [data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title,
 [data-md-color-scheme="slate"] .md-typeset details.question > summary {
-  background-color: rgba(122, 184, 163, 0.14); /* Slightly deeper title tint */
-  border-bottom: 1px solid rgba(141, 182, 165, 0.45);
+  background-color: #8db6a5;
+  color: #1b2d2a;
+  border-bottom: 1px solid rgba(27, 45, 42, 0.25);
 }
 
 [data-md-color-scheme="slate"] .md-typeset .admonition.question > .admonition-title::before,
 [data-md-color-scheme="slate"] .md-typeset details.question > summary::before {
-  background-color: #8db6a5; /* Matching calm accent icon */
+  background-color: #1b2d2a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.question > *,
+[data-md-color-scheme="slate"] .md-typeset details.question > * {
+  color: #1b2d2a;
 }
 
 /* Change text link colors to match the site's neon green */
