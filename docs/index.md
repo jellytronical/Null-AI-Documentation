@@ -1,4 +1,4 @@
-# Pokémon Null AI documentation
+# Pokémon Null AI Documentation
 
 ![Null AI Logo](assets/logo.png)
 
