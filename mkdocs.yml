@@ -17,10 +17,10 @@ extra_css:
 nav:
   - Home: index.md
   - Switch AI: switch-ai.md
-  - Support pokemon: support-pokemon.md
-  - Move scoring:
+  - Support Pokemon: support-pokemon.md
+  - Move Scoring:
       - Overview: move-scoring.md
-      - Scoring reference: move-scoring-reference.md
+      - Scoring Reference: move-scoring-reference.md
   - FAQ: faq.md
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
 markdown_extensions:

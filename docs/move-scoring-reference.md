@@ -1,5 +1,5 @@
 <a id="move-scoring-reference"></a>
-# Move scoring reference
+# Move Scoring Reference
 
 <a id="offensive-setup"></a>
 #### Offensive setup  

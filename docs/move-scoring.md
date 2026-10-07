@@ -1,5 +1,5 @@
 <a id="move-scoring"></a>
-# Move scoring overview
+# Move Scoring Overview
 
 The AI assigns a score to every available move and selects the highest-scoring option each turn. If multiple moves share the same score, one is chosen at random. In Double Battles, it evaluates every move against all possible targets and selects the highest-scoring move–target combination. In Null, the AI has full knowledge of your team’s stats, moves, items and abilities from the start of the fight. 
 
