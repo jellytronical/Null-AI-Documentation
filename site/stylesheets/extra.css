@@ -21,20 +21,16 @@
 /* Question admonition */
 [data-md-color-scheme="slate"] {
   .md-typeset .question {
-    /* Soft matte background (a very faint green-tinted dark surface) */
-    background-color: rgba(16, 185, 129, 0.05);
-    /* Softer, more balanced emerald border */
-    border-color: #10b981;
+    background-color: rgba(99, 102, 241, 0.05); /* Soft indigo-tinted matte body */
+    border-color: #6366f1;                      /* Balanced slate-indigo border */
   }
 
   .md-typeset .question > .admonition-title {
-    /* Tint for the title bar */
-    background-color: rgba(16, 185, 129, 0.12);
+    background-color: rgba(99, 102, 241, 0.12);  /* Slightly deeper title tint */
   }
 
   .md-typeset .question > .admonition-title::before {
-    /* Matching icon/indicator color */
-    background-color: #10b981;
+    background-color: #6366f1;                  /* Matching accent icon */
   }
 }
 
