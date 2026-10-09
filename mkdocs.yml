@@ -22,6 +22,7 @@ nav:
       - Overview: move-scoring.md
       - Scoring Reference: move-scoring-reference.md
   - FAQ: faq.md
+  - Pokémon Null Resources: resources.md
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
 markdown_extensions:
   - admonition
