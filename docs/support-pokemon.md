@@ -21,3 +21,10 @@ These moves are treated as utility and do **not** contribute toward the damaging
 * Surf and Dive (only when the user is a Cramorant)
 
 The support class plays a notable role in some [Switch AI](switch-ai.md) decisions.
+
+## Example Support Pokémon
+
+![Carbink support set](assets/support-carbink.png){ width="135" }
+![Banette-Mega support set](assets/support-banette.png){ width="135" }
+![Scizor support set](assets/support-scizor.png){ width="135" }
+![Cramorant support set](assets/support-cramorant.png){ width="135" }
