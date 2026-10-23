@@ -40,7 +40,7 @@ Stuff Cheeks, Harden, Withdraw, Barrier, Acid Armor, Iron Defense, Cotton Guard,
 
 <a id="mixed-setup"></a>
 #### Mixed setup  
-No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary, Superpowerm, Calm Mind, Quiver Dance
+No Retreat, Victory Dance, Coil, Bulk Up, Curse, Contrary Superpower/Calm Mind, Quiver Dance, Take Heart
 
 Moves are categorized as either **Defensive Setup** or **Offensive Setup**, depending on the player's Pokémon moveset.
 
@@ -145,7 +145,10 @@ If move can faint Player:
 * Else -20 Score
 
 <a id="sleep-sing-dark-void-yawn"></a>
-#### Sleep (Sing, Dark Void, Yawn)  
+#### Sleep 
+
+Sing, Sleep Powder, Hypnosis, Lovely Kiss, Spore, Grass Whistle, Yawn, Dark Void
+
 25% of the time, if AI doesn’t see kill with its maxroll:
 
 * If the target can be put to sleep: +1 Score  
@@ -155,7 +158,10 @@ If move can faint Player:
 Additionally, if it’s a Double Battle and the move is Dark Void: +2 Score (80%)
 
 <a id="poison-poison-gas-toxic"></a>
-#### Poison (Poison Gas, Toxic, etc.)   
+#### Poison 
+
+Poison Gas, Toxic, Mortal Spin, Poison Powder, Toxic Thread
+
 20% of the time, if AI doesn’t see kill with its maxroll, and if the player’s HP is > 20%:
 
 * If the player has no damaging moves: +1 Score  
@@ -163,7 +169,10 @@ Additionally, if it’s a Double Battle and the move is Dark Void: +2 Score (80%
 * If AI has Venoshock, Hex, Infernal Parade, Venom Drench or Merciless: +1 Score
 
 <a id="paralysis-nuzzle-thunder-wave-glare"></a>
-#### Paralysis (Nuzzle, Thunder Wave, Glare, etc.)   
+#### Paralysis 
+
+Nuzzle, Thunder Wave, Glare, Buzzy Buzz, Stun Spore
+
 If AI doesn’t see kill with its maxroll:
 
 * If AI is slower before paralysis but faster after paralysis: +2 Score  
@@ -172,7 +181,10 @@ If AI doesn’t see kill with its maxroll:
 * Else: +1 Score
 
 <a id="burn-frostbite-sizzly-slide-will-o-wisp-freezy-frost"></a>
-#### Burn, Frostbite (Sizzly Slide, Will-O-Wisp, Freezy Frost)   
+#### Burn, Frostbite
+
+Will-O-Wisp, Sizzly Slide, Freezy Frost
+
 33% of the time, if AI doesn’t see kill with its maxroll:
 
 * +1 Score  
@@ -180,7 +192,10 @@ If AI doesn’t see kill with its maxroll:
 * Else if AI or Partner has Hex or Infernal Parade: +1 Score
 
 <a id="confusion-confuse-ray-supersonic-swagger-flatter"></a>
-#### Confusion (Confuse Ray, Supersonic, Swagger, Flatter)   
+#### Confusion 
+
+Supersonic, Confuse Ray, Sweet Kiss, Teeter Dance, Swagger, Flatter
+
 25% of the time, if AI doesn’t see kill with its maxroll:
 
 * If the target can be confused: +1 Score  
@@ -192,7 +207,9 @@ Additionally for Swagger and Flatter:
 * In a Double Battle, +9 Score (25%), +8 Score (75%) if the partner cannot be confused and if the partner benefits from the respective stat boost.
 
 <a id="speed-lowering-effects"></a>
-#### Speed lowering effects (Scary Face, Electroweb, Syrup Bomb, etc.)
+#### Speed lowering effects 
+
+Scary Face, Electroweb, Syrup Bomb, Bulldoze, Cotton Spore, Drum Beating, Glaciate, Icy Wind, Low Sweep, Mud Shot, Pounce, Rock Tomb, String Shot
 
 * If AI is slower and move is status: +1 Score  
 * If AI is faster: -2 Score
@@ -200,14 +217,19 @@ Additionally for Swagger and Flatter:
 Additionally, if it’s a Double Battle and the move is a damaging spread move: +1 Score
 
 <a id="attack-defense-special-defense-and-special-attack-lowering-effects"></a>
-#### Attack, Defense, Special Defense and Special Attack lowering effects (Charm, Lunge, Screech, Rock Smash, Metal Sound, Lumina Crash, Confide, Mystical Fire, etc.)
+#### Attack, Defense, Special Defense and Special Attack lowering effects 
+
+Charm, Lunge, Screech, Rock Smash, Metal Sound, Lumina Crash, Confide, Mystical Fire, Baby-Doll-Eyes, Breaking Swipe, Chilling Water, Feather Dance, Growl, Noble Roar, Play Nice, Tearful Look, Trop Kick, Fire Lash, Grav Apple, Leer, Tail Whip, Thunderous Kick, Tickle, Triple Arrow, Captivate, Eerie Impulse, Skitter Smack, Snarl, Spirit Break, Struggle Bug, Acid Spray, Apple Acid, Fake Tears
 
 * If Player has -1 of the stat or less: -2 Score (80%)  
 * Else +1 Score (20%)  
 * If move lowers Attack or Special Attack and Player doesn’t have a move of the corresponding category: -2 Score
 
 <a id="accuracy-lowering-effects"></a>
-#### Accuracy lowering effects  
+#### Accuracy lowering effects 
+
+Flash, Kinesis, Mud Slap, Sand Attack, Smokescreen
+
 80% of the time, if the player has -2 accuracy or less: -2 Score
 
 * If AI HP > 90%, +2 Score (80%)  
@@ -215,7 +237,7 @@ Additionally, if it’s a Double Battle and the move is a damaging spread move: 
 * Else if AI HP < 60%, -1 Score
 
 <a id="stealth-rock-stone-axe-spikes-ceaseless-edge-toxic-spikes-hazards"></a>
-#### Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes (Hazards)
+#### Hazards: Stealth Rock, Stone Axe, Spikes, Ceaseless Edge, Toxic Spikes 
 
 * If Player is on last mon: -10 Score  
 * If its AIs first turn and is not last mon: +2 Score (98%)  
@@ -285,7 +307,7 @@ Additionally:
 * If AI can pass something positive: +1 Score
 
 <a id="u-turn-volt-switch-flip-turn-parting-shot"></a>
-#### U-Turn, Volt Switch, Flip Turn, Parting Shot
+#### Pivot moves: U-Turn, Volt Switch, Flip Turn, Parting Shot
 
 * If AI is Palafin: +12 Score (doesn’t stack with anything else)  
 * If AI kills Player in more than 3 hits: +6 Score (unless move is Parting Shots, which already starts as +6 Score due to being a status move)  
@@ -297,7 +319,10 @@ Additionally:
 * If AI kills Player in more than 3 hits: +6 Score (Unless Player cannot lose the item)
 
 <a id="screens-light-screen-reflect-aurora-veil"></a>
-#### Screens (Light Screen, Reflect, Aurora Veil)  
+#### Screens 
+
+Light Screen, Reflect, Aurora Veil
+
 If AI should set screen:
 
 * +1 Score (50%)  
@@ -310,7 +335,9 @@ AI fails the should set screen routine if the player has no physical move when R
 25% of the time, if Grassy Terrain is active: +6 Score
 
 <a id="ohko-moves-fissure-horn-drill"></a>
-#### OHKO Moves (Fissure, Horn Drill, etc.)
+#### OHKO Moves 
+
+Fissure, Guillotine, Horn Drill, Sheer Cold
 
 * If AI kills player in 3 or more hits: +6 Score  
 * Else +5 Score  
@@ -318,7 +345,9 @@ AI fails the should set screen routine if the player has no physical move when R
 * If Player has Focus Band or Focus Sash/Sturdy active: -20 Score
 
 <a id="binding-moves-fire-spin-whirlpool-snap-trap"></a>
-#### Binding/Trapping Moves (Fire Spin, Whirlpool, Snap Trap, etc.)
+#### Binding Moves 
+
+Bind, Clamp, Fire Spin, Infestation, Magma Storm, Sand Tomb, Snap Trap, Thunder Cage, Whirlpool, Wrap
 
 * If player is immune to trapping: -20 Score  
 * +6 Score (80%), +8 Score (20%)  
@@ -331,12 +360,17 @@ AI fails the should set screen routine if the player has no physical move when R
 * If player is Water or Steel Type: +1 Score
 
 <a id="trapping-octolock-mean-look-anchor-shot-spirit-shackle-thousand-waves-jaw-lock"></a>
-#### Trapping (Octolock, Mean Look, Anchor Shot, Spirit Shackle, Thousand Waves, Jaw Lock, etc.)
+#### Trapping 
+
+Octolock, Mean Look, Fairy Lock, Anchor Shot, Spirit Shackle, Thousand Waves, Jaw Lock
 
 * If player isn’t immune to trapping: +6 Score
 
 <a id="recovery-moves-recover-slack-off-heal-order-roost-strength-sap-pain-split"></a>
-#### Recovery Moves (Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, etc.)
+#### Recovery Moves 
+
+Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, Lunar Blessing, Milk Drink, Moonlight, Morning Sun, Purify, Rest, Shore Up, Soft-Boiled, Synthesis, Life Dew, Jungle Healing
+
 
 * If AI decides it should recover: +1 Score  
 * Else: -1 Score  
@@ -345,7 +379,10 @@ AI fails the should set screen routine if the player has no physical move when R
 For extra details on the function that AI uses to decide when to recover, see the extra details below.
 
 <a id="drain-moves-giga-drain-draining-kiss"></a>
-#### Drain-Moves (Giga Drain, Draining Kiss, etc.)  
+#### Drain-Moves 
+
+Absorb, Bitter Blade, Bouncy Bubble, Drain Punch, Dream Eater, Draining Kiss, Giga Drain, Horn Leech, Leech Life, Matcha Gotcha, Mega Drain, Oblivion Wing, Parabolic Charge
+
 If the target doesn’t have Liquid Ooze:
 
 * If AI is at half HP or under, and if that move kills player in <= 4 hits: +6 Score  
@@ -353,6 +390,7 @@ If the target doesn’t have Liquid Ooze:
 
 <a id="copycat-mirror-move-me-first"></a>
 #### Copycat, Mirror Move, Me First  
+
 AI understands what move will be copied and applies its AI routine on it
 
 <a id="roar-whirlwind"></a>
@@ -415,6 +453,7 @@ AI understands what move will be copied and applies its AI routine on it
 
 * If Player doesn’t have Rapid Spin or Magic Guard: +1 Score (50%)  
 * If AI kills Player in more than 3 hits: +1 Score (50%)
+* If Player kills AI: -20 Score
 
 <a id="teleport-chilly-reception"></a>
 #### Teleport, Chilly Reception
@@ -425,7 +464,6 @@ AI understands what move will be copied and applies its AI routine on it
 <a id="sky-attack-freeze-shock-ice-burn"></a>
 #### Sky Attack, Freeze Shock, Ice Burn
 
-* If move can be immediately used: +9 Score (80%)  
 * Else -20 Score
 
 <a id="disable"></a>
@@ -474,7 +512,9 @@ AI understands what move will be copied and applies its AI routine on it
 * If Player is trapped: +2 Score
 
 <a id="weather-terrain-moves"></a>
-#### Weather & Terrain Moves (Sunny Day, Sandstorm, Electric Terrain, etc.)
+#### Weather & Terrain Moves 
+
+Hail, Rain Dance, Sandstorm, Snowscape, Sunny Day, Electric Terrain, Grassy Terrain, Misty Terrain, Psychic Terrain
 
 * +2 Score  
 * If AI holds an item that increases its duration: +1 Score (80%)
@@ -503,7 +543,8 @@ AI understands what move will be copied and applies its AI routine on it
 * If AIs last used move was Fury Cutter / Echoed Voice: +2 Score
 
 <a id="protection-protect-kings-shield"></a>
-#### Protection (Protect, King’s Shield, etc.)  
+#### Protection
+
 Protect, Detect, Spiky Shield, Silk Trap, King’s Shield, Baneful Bunker, Obstruct, Burning Bulwark
 
 * If Player is incapacitated: -20 Score  
@@ -670,11 +711,13 @@ AI always chooses first fainted mon in party order.
   * Unconditional +1 Score for every other stat  
 * Psych Up on Partner in a Double Battle: If Partner has more raised stats: +10 Score (25%), +8 Score (75%)
 
+<a id="recharge"></a>
 #### Recharge  
 Hyper Beam, Blast Burn, Hydro Cannon, Frenzy Plant, Giga Impact, Rock Wrecker, Roar of Time, Prismatic Laser, Meteor Assault, Eternabeam
 
 * If move cannot faint player: -1 Score
 
+<a id="double-battle-only"></a>
 #### Double Battle only
 
 If the status move targets a partner, it does not get the base +6 Score by default.  
@@ -686,13 +729,16 @@ If the partner has one of the following abilities: +6 Score (25%)
 * Motor Drive (if Speed can be increased)  
 * Contrary
 
+<a id="priority-moves-weakness-policy"></a>
 #### Priority Moves - Weakness Policy  
 If priority move can activate Weakness Policy: +12 Score (25%), +8 Score (75%)
 
+<a id="spread-moves-to-override-negative-abilities-brutal-swing"></a>
 #### Spread Moves to override negative abilities (Brutal Swing)  
 The following abilities count as a negative ability: Emergency Exit, Truant, Defeatist, Slow Start.  
 If Partner is Mummy, Wandering Spirit or Lingering Aroma and move cannot faint partner: +9 Score (25%), +7 Score (75%)
 
+<a id="beat-up-double-battle-only"></a>
 #### Beat Up (Double Battle only)  
 +9 Score (75%), +12 Score (25%) if:
 
@@ -701,17 +747,21 @@ If Partner is Mummy, Wandering Spirit or Lingering Aroma and move cannot faint p
 * Beat Up cannot faint the partner  
 * Partner is first turn out
 
+<a id="heal-pulse-floral-healing-pollen-puff"></a>
 #### Heal Pulse, Floral Healing, Pollen Puff  
 If Partner is under half health and user is faster than both player mons: +6 Score
 
+<a id="helping-hand"></a>
 #### Helping Hand  
 If Partner move is not a status move: +7 Score (50%)
 
+<a id="dragon-cheer"></a>
 #### Dragon Cheer
 
 * +6 Score  
 * If Partner is Dragon Type: +1 Score
 
+<a id="coaching"></a>
 #### Coaching  
 50% of the time:
 
@@ -719,18 +769,22 @@ If Partner move is not a status move: +7 Score (50%)
 * If partner attack stat < +2: +1 Score (50%)  
 * If partner defense stat < +2: +1 Score (50%)
 
+<a id="role-play"></a>
 #### Role Play  
 If user doesn’t already have Huge Power or Pure Power and if partner has Huge Power, Pure Power or Illuminate: +10 Score (25%), +8 Score (75%)  
 
+<a id="entrainment"></a>
 #### Entrainment  
 If user has Huge Power and Partner doesn’t have Huge Power or Pure Power: +10 Score (25%), +8 Score (75%)
 
+<a id="teatime"></a>
 #### Teatime
 
 * -1 Score (50%)  
 * If user or partner has pinch berries: +8 Score  
 * Else if user or partner has a berry: +6 Score
 
+<a id="instruct"></a>
 #### Instruct  
 Starts at +6 Score and AI tries to evaluate the instructed move on the partner:
 
@@ -739,18 +793,22 @@ Starts at +6 Score and AI tries to evaluate the instructed move on the partner:
 
 If the evaluated move isn’t a status move and a spread move: +1 Score (50%)
 
+<a id="acupressure-speed-swap"></a>
 #### Acupressure, Speed Swap  
 +8 Score (25%), +0 Score (75%)
 
+<a id="ally-switch"></a>
 #### Ally Switch  
 20% of the time, if Player kills AI-Partner:
 
 * If fast kill: +2 Score  
 * If slow kill: +1 Score
 
+<a id="follow-me-rage-powder"></a>
 #### Follow Me, Rage Powder  
 If Player kills AI-Partner: +1 Score (50%)
 
+<a id="round"></a>
 #### Round
 
 To understand Round AI, it is important to first understand how partner move scoring works in Double Battles.

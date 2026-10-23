@@ -28,3 +28,5 @@ The support class plays a notable role in some [Switch AI](switch-ai.md) decisio
 ![Banette-Mega support set](assets/support-banette.png){ width="135" }
 ![Scizor support set](assets/support-scizor.png){ width="135" }
 ![Cramorant support set](assets/support-cramorant.png){ width="135" }
+![Druddigon support set](assets/support-druddigon.png){ width="135" }
+![Cinccino support set](assets/support-cinccino.png){ width="135" }
