@@ -23,7 +23,7 @@ nav:
       - Scoring Reference: move-scoring-reference.md
       - Damage Move Usability Checks: usability.md
   - FAQ: faq.md
-  - Mechanics changes: mechanics-changes.md
+  - Mechanics Changes: mechanics-changes.md
   - Pokémon Null Resources: resources.md
 site_url: https://jellytronical.github.io/Null-AI-Documentation/
 markdown_extensions:
