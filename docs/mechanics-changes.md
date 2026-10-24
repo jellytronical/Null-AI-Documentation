@@ -82,20 +82,21 @@ Here is a list of all the bosses and their matching level caps:
 
 The comeback mechanic is designed to help Nuzlocke runs recover from heavy losses. Throughout the journey, players who have suffered enough deaths can receive assistance from Anabel and Hunter in Route 124.
 
-**Activation Requirements and Rewards:**
+#### Activation Requirements and Rewards
+
 - After obtaining the Stone Badge, players with at least 3 deaths can speak to Anabel in Root Academy to receive one random Level 20 Pokémon from the following pool: Arbok, Blitzle, Boltund, Dubwool, Espurr, Lilligant, Mudsdale, Ninetales-Alola, Swalot, Tyrogue, or Vespiquen.
 
 - After obtaining the Balance Badge, players with at least 12 deaths can speak to Anabel in Root Academy to receive one random Level 20 Pokémon from the following pool: Accelgor, Braviary, Breloom, Carracosta, Cofagrigus, Crabominable, Falinks, Galvantula, Sigilyph, Tauros-Paldea-Combat, or Trevenant.
 
 - All Pokémon gifted by Anabel have Root Academy as their met location. Some may come with their Scale moves.
 
- -Later in the game, players who have accumulated at least 30 deaths can speak to Hunter on Route 124 before defeating Leaf in Mossdeep to receive additional rewards. However, at least one of Anabel's two Comeback flags must have been activated for this reward to be available.
+#### Hunter's Rewards
 
-**Hunter's Rewards:**
+Later in the game, players who have accumulated at least 30 deaths can speak to Hunter on Route 124 before defeating Leaf in Mossdeep to receive additional rewards. However, at least one of Anabel's two Comeback flags must have been activated for this reward to be available.
 
 - 1 Master Ball
 - **1 randomly chosen Mint:** Hasty or Naive
-- **-1 random gift Pokémon holding an Eject Button:** Sceptile, Weavile, Sneasler, Ursaluna, Tapu Koko, Volcarona, Aegislash, Aerodactyl, or Starmie.
+- **1 random gift Pokémon holding an Eject Button:** Sceptile, Weavile, Sneasler, Ursaluna, Tapu Koko, Volcarona, Aegislash, Aerodactyl, or Starmie.
 
 #### Death counter
 
