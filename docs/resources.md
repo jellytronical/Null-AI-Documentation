@@ -24,7 +24,8 @@ The tables below outlines additional resources available for Pokémon Null.
 | --- | --- |
 | [Master sheet](https://docs.google.com/spreadsheets/d/16OKQJxnR0fDui9g4lhzx4x8qiCOTptAOYA8zDOn6h04/edit?usp=sharing) | A document that allow you to enter, track, and archive your data from your attempts of Pokémon Null. Also provides details on trainers, move changes, and AI behavior.
 | [Color-coded trainer battles](https://docs.google.com/spreadsheets/d/1ack17Gkn_sRG94HD9CP2UE0NcJ0RZz8FvBf6OgRxDMI/edit?usp=sharing) | Trainer battles with color-coding to identify Support Pokemon and dangerous abilities. |
-| [Alternative calculator](https://nathanmelons.github.io/Null-1.2-Damage-Calc//) | An alternative damage calculator. |
-| [Encounter tracker](https://null-tracker-12.vercel.app/) | A tracker for your encounters and duplicate Pokémon.  |
+| [Alternative calculator 1](https://nathanmelons.github.io/Null-1.2-Damage-Calc//) | An alternative damage calculator. |
+| [Alternative calculator 2](https://baat01.github.io/Null-1.2-Damage-Calc/) | An alternative damage calculator. |
+| [Encounter tracker](https://null-encounter-tracker.vercel.app/) | A tracker for your encounters and duplicate Pokémon.  |
 | [Stream display](https://github.com/Sykless/PokemonNullDisplay) | A program that generates images of Pokémon caught in-game. |
 
