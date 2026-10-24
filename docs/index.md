@@ -10,5 +10,6 @@ This document explains how the AI behaves during a turn. It is not fully exhaust
 | [Support Pokémon](support-pokemon.md) | Defines how the AI classifies a Pokémon as a support. |
 | [Move Scoring Overview](move-scoring.md) | Explains how the AI scores moves and chooses what to use each turn. |
 | [Scoring Reference](move-scoring-reference.md) | An extensive list of score conditions used for specific moves. |
+| [Damage Move Usability Checks](usability.md) | An extensive list of score conditions used for specific moves. |
 | [FAQ](faq.md) | Answers to frequently asked questions about the AI. |
 | [Pokémon Null Resources](resources.md) | Reference additional resouces for Pokémon Null. |
