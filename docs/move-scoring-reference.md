@@ -101,6 +101,12 @@ Double Team, Minimize
 * Else if Player faints AI after setup: -2 Score (Accounts for berries)  
 * Else +2 Score
 
+<a id="choice-ai"></a>
+## Choice AI
+If AI is holding a Choice Item: -20 Score to all status moves except:
+
+Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
+
 <a id="acupressure"></a>
 #### Acupressure
 
@@ -377,6 +383,39 @@ Recover, Slack Off, Heal Order, Roost, Strength Sap, Pain Split, Lunar Blessing,
 * Pain Split is only used if AI recovers more than 30%
 
 For extra details on the function that AI uses to decide when to recover, see the extra details below.
+
+<a id="should-ai-recover-function"></a>
+## Should AI Recover function
+
+The function first checks whether recovery is worthwhile, then evaluates the AI's
+speed and remaining HP.
+
+| Recovery move | Recovery amount used for the calculation |
+| --- | ---: |
+| Standard recovery (Recover, Slack Off, Heal Order, Roost, Strength Sap) | 50% |
+| Weather-based recovery (Morning Sun, Synthesis, Moonlight) | 67% |
+| Rest | 100% |
+
+**Return `False` when:**
+
+- The AI mon is **Toxic'd** and the move is not Rest.
+- The player's mon deals at least as much damage as the recovery move would heal.
+
+The damage comparison uses the recovery percentage listed above.
+
+**If the AI is faster:**
+
+- If the player's mon can currently KO the AI mon but cannot KO it after recovery, return `True`.
+- If the player's mon cannot KO the AI mon:
+  - Between 40% and 66% HP: return `True` 50% of the time and `False` 50% of the time.
+  - Below 40% HP: return `True`.
+
+**If the AI is slower:**
+
+- Below 70% HP: return `True` 75% of the time and `False` 25% of the time.
+- Below 50% HP: return `True`.
+
+If none of these conditions apply, the function returns `False`.
 
 <a id="drain-moves-giga-drain-draining-kiss"></a>
 #### Drain-Moves 
