@@ -102,7 +102,7 @@ Double Team, Minimize
 * Else +2 Score
 
 <a id="choice-ai"></a>
-## Choice AI
+#### Choice AI
 If AI is holding a Choice Item: -20 Score to all status moves except:
 
 Memento, Parting Shot, Baton Pass, Teleport, Chilly Reception, Sleep Talk, Me First, Copycat, Mimic, Transform, Sketch, Nature Power, Assist, Metronome.
