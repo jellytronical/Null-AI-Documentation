@@ -6,7 +6,7 @@ The tables below outlines additional resources available for Pokémon Null.
 
 | Resource | Description |
 | --- | --- |
-| [Null website](https://pokemonnull.com/) | The main website for Null where you can access the patch to play it. |
+| [Pokémon Null website](https://pokemonnull.com/) | The main website for Null where you can access the patch to play it. |
 | [Pokédex](https://nulldex.pokemon0null.workers.dev/) | A complete referenece for Pokemon, encounters, moves, and abilities. |
 | [Trainer battles](https://docs.google.com/spreadsheets/d/1mwHPt0AMzOJ_hfmDrVZpKP-Hf4eTT0ROhY8Wa7bY7r8/edit?usp=sharing) | Details on every trainer battle. |
 | [Damage calculator](https://nullcalc.pokemon0null.workers.dev/) | The official damage calculator. |
@@ -16,6 +16,8 @@ The tables below outlines additional resources available for Pokémon Null.
 | [Mechanic changes](https://drive.google.com/file/d/1eT_iu57FVhxJHkjPC0zy5qAkmVxdmD85/view?usp=drive_link) |A complete list of any changes to the way mechanics behave. |
 | [Null 1.2.6 lua script](https://drive.google.com/file/d/1peViOOl9I8r2CrYayA5eD5Gy_2qS71-5/view?usp=drive_link) | A lua script compatible with Pokémon Null to export into the damage calculator. |
 | [Pokémon Null Google Drive folder](https://drive.google.com/drive/folders/10H1Pm-1dhEgc0QmjsnA9A9PY6nNRXtoJ?usp=sharing) | A Google Drive folder containing developer-owned resources. |
+| [Discord](https://discord.com/invite/DqxxC5KQ6r) | Official Discord server for Pokémon Null. |
+| [AI code](https://playcode.io/c-playground--019ec228-a451-75f9-8be6-c7b68df3784a) | The code that instructs the AI on move decisions and battle mechanics. |
 
 
 ## Additional resources
