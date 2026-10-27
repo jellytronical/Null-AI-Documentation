@@ -14,7 +14,7 @@ The tables below outlines additional resources available for Pokémon Null.
 | [Pokémon locations](https://docs.google.com/spreadsheets/d/1EdJf2JRe5dLPEX1vWmbeRFeCIh-7hgos-t52JQd1Xb8/edit?usp=sharing) | Information about the locations of in-game Pokémon.  |
 | [Move changes](https://docs.google.com/spreadsheets/d/17Vyr-bXeu9MGMZt_7dttb1OF8cuIcc5LihYmL0DEUu8/edit?usp=drive_link) | A complete list of any changes to the way moves behave. |
 | [Mechanic changes](https://drive.google.com/file/d/1eT_iu57FVhxJHkjPC0zy5qAkmVxdmD85/view?usp=drive_link) |A complete list of any changes to the way mechanics behave. |
-| [Null 1.2.5 lua script](https://drive.google.com/file/d/10gQ5U4HIZg0O2P7TR8epqYUIT56vuDx1/view?usp=drive_link) | A lua script compatible with Pokémon Null to export into the damage calculator. |
+| [Null 1.2.6 lua script](https://drive.google.com/file/d/1peViOOl9I8r2CrYayA5eD5Gy_2qS71-5/view?usp=drive_link) | A lua script compatible with Pokémon Null to export into the damage calculator. |
 | [Pokémon Null Google Drive folder](https://drive.google.com/drive/folders/10H1Pm-1dhEgc0QmjsnA9A9PY6nNRXtoJ?usp=sharing) | A Google Drive folder containing developer-owned resources. |
 
 
