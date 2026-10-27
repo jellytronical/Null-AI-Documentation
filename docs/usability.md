@@ -1,6 +1,12 @@
 # Damage Move Usability Checks
 
-Normally, the AI prefers the move with the highest damage, referred to as the Highest Damage Move (HDM). However, some moves are unusable under specific conditions. If the AI simply selected the HDM and applied a score penalty afterward, it could end up choosing a random damaging move instead of the second strongest option. To prevent this, the AI checks whether a move is usable before comparing its damage. If a move is considered unusable, its calculated damage is set to 0, allowing the AI to correctly identify the next highest damage option. **This check works in both directions**. The AI uses it when deciding which moves to use itself, but also when calculating the damage of moves the player might use.
+Normally, the AI prefers the move with the highest damage, referred to as the Highest Damage Move (HDM). 
+
+However, some moves are unusable under specific conditions. If the AI simply selected the HDM and applied a score penalty afterward, it could end up choosing a random damaging move instead of the second strongest option. 
+
+To prevent this, the AI checks whether a move is usable before comparing its damage. If a move is considered unusable, its calculated damage is set to 0, allowing the AI to correctly identify the next highest damage option. 
+
+**This check works in both directions**. The AI uses it when deciding which moves to use itself, but also when calculating the damage of moves the player might use.
 
 The following is a complete breakdown of the conditions covered by this check:
 
