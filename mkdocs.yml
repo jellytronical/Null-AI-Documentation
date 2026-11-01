@@ -16,7 +16,6 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Home: index.md
-  - Changelog: changelog.md
   - Switch AI: switch-ai.md
   - Support Pokémon: support-pokemon.md
   - Move Scoring:
