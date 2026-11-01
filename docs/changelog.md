@@ -12,25 +12,148 @@ This page records notable changes, fixes, and balance updates for Pokémon Null.
 - Fixed several move effects not working correctly, including Alluring Voice, Anchor Shot, and Spirit Shackle.
 - Fixed Struggle failing on Prankster when all usable moves are priority moves.
 
+## Version 1.2.5
+
+### Bug fixes
+
+- Fixed several issues with Berries that apply stat changes.
+- Fixed Silk Trap, Obstruct, Burning Bulwark, Mat Block, and Crafty Shield incorrectly blocking Status Moves.
+- Fixed Covert Cloak not working against abilities and items that add additional effects, such as King's Rock and Poison Point.
+- Fixed Powder affecting Grass-Types.
+- Fixed Glaive Rush missing its Contact property.
+- Fixed Flare Blitz not being boosted by Reckless.
+- Fixed Terrain Pulse not applying its effect when the user is not grounded.
+- Fixed Persim Berry having a delayed activation when Outrage confuses.
+- Fixed Adrenaline Orb not activating when Intimidate is blocked by Clear Body.
+- Fixed Intimidate and similar abilities triggering Eject Pack at the wrong time when Mega Evolving.
+- Fixed Greta being unable to set Stealth Rock with Stone Axe.
+- Fixed the pond in Rustboro Grove being walkable on some tiles.
+
+### AI fixes and adjustments
+
+- Fixed AI being able to use Stone Axe or Ceaseless Edge when Stealth Rock or Spikes, respectively, are already maxed out.
+- Fixed AI being able to use Stone Axe or Ceaseless Edge over fast kill when it isn't intended.
+- Fixed AI incorrectly using Syrup Bomb when it shouldn't, such as against Clear Amulet.
+- Fixed AI incorrectly calculating Revenge as boosted when it shouldn't during switch-in evaluation.
+- Fixed AI applying a score penalty to self-targeting moves when the target is in a semi-vulnerable state and the AI is faster.
+- Fixed AI not correctly applying a score penalty to setup moves in certain cases, such as Take Heart and Stuff Cheeks when facing Unaware.
+- Fixed AI evaluating Stomping Tantrum at full power during switch-in evaluation if the previous Pokémon was flinched.
+- Fixed AI being able to use Memento against targets with Clear Body or White Smoke.
+- Fixed AI incorrectly applying a Gem boost to Future Sight, which cannot be boosted by Gems.
+- Fixed Feint AI not applying if the target has Wide Guard or Quick Guard alongside a Protection Move.
+- Fixed some Shell Smash setup discouragement checks not being properly applied by the AI.
+- Fixed Upper Hand AI having the wrong percentage of being used.
+- Fixed King's Shield AI incorrectly applying to Aegislash-Shield.
+- Removed Two-Turn AI to eliminate some unwanted side effects. Sky Attack, Freeze Shock, and Ice Burn are now calculated like regular damage, but are still discouraged by AI when no Power Herb is present.
+
+### Learnsets
+
+- Fixed some oversights where Pokémon were missing moves due to their evolution level, including Armaldo missing Rock Blast and Kingdra missing Icy Wind.
+- Metal Burst and Counter are now Heart Scale exclusive moves for Archaludon.
+- Added Level 99 and/or Level 100 moves for some of the weaker Safari Zone Pokémon, Ultra Beasts, and a few other Pokémon (e.g Luxray, Goodra, Ursaluna-Bloodmoon).
+- Slightly improved the learnsets of some future Paradox Pokémon.
+- Some other minor changes may have been made but are not further specified.
+
+### Trainers
+
+- Reduced the Level of the following Pokémon by 1: Camper Charlie's Floette-Eternal, Fallarbor Courtney's Iron Moth.
+- Reworked Blackbelt Nob's Conkeldurr for consistency reasons: Conkeldurr is no longer preburned and now has Flame Orb.
+- Slightly reduced the amount of Hurricanes in the game: Ninja Boy Lao Noctowl Hurricane -> Air Slash and Gym Leader Winona 1 Celesteela Hurricane -> Air Slash.
+- Gym Leader Winona 1's Landorus: Floaty Fall -> Fly.
+- Magma Grunt Zeldest's Yveltal has been reworked: Fiery Wrath -> Dark Pulse, Black Glasses -> Apicot Berry.
+- Seafloor Cavern Archie's Iron Jugulis: Yache Berry -> Assault Vest to improve Iron Bundle's viability for the fight.
+- Triathlete Stephin's Ogerpon: Growth -> Upper Hand to remove some severe cheese.
+- John & Jay's Iron Jugulis: Terrain Pulse -> Thunderbolt to account for the above bugfix.
+- Pokéfan Bethany's Chi Yu: Energy Ball -> Ruination.
+- Changed Juan's Kingdra set to account for Electric Terrain being permanent since 1.2, which made its Chesto Berry Rest set no longer work.
+- Rocket Ambush Weezing: Focus Band -> Ability Shield to make the fights less restrictive.
+- Youngster Des' Blaziken: Bolt Strike -> Thunder Punch.
+- Slightly changed the Maxie & Archie Double Battle in Victory Road based on community feedback.
+- Nature mistakes: MHO Grunt #10's Zarude: Timid -> Jolly, SFC Shelly's Pheromosa: Naive -> Jolly.
+- As compensation for some of the above nerfs, to keep a similar overall difficulty, the following sets have been buffed: Sis And Bro Reli&Ian's Kricketune, Leaf 2 Deoxys, Frontier Head Noland's Mawile.
+
+### Other
+
+- The following tables have been adjusted: Route 111 Static, Route 119, Magma Hideout 1F.
+- Slowking Ability: Shell Armor -> Regenerator. For compensation, an Ability Tutor is included in Dewford Town that turns Slowking's Ability into Shell Armor for 3 Scales.
+- Reverted Hurricane to being a Wind move following community feedback.
+- Added a new Move Tutor in Sootopolis City to provide more flexibility when building lategame movesets. Also added Heal Bell and Aromatherapy to the Route 120 Move Tutor, and Air Cutter to the second Petalburg Move Tutor.
+- Added a comeback mechanic for struggling Nuzlocke runs to encourage keep playing bleeding runs. See the Mechanic Changes document for details.
+- Adjusted the Elite Four Heart Scale Shop to lower prices, remove redundant items, and introduce new ones. Most notably, added the Recall Charm, which allows a Pokémon to relearn a move upon use.
+- Added TM22 Poison Jab to Route 118, as it was previously unavailable outside of the Lilycove Department Store.
+- Added Hidden Ability Tutors for the following Pokémon: Tauros-Paldea-Combat, Amoonguss, Hatterene, Toxapex, Hydrapple, Slowbro, Cyclizar.
+- Added an NPC in Lilycove City Contest Hall that gives you an Air Balloon after the 7th Badge if Spinda is shown.
+- Added an NPC on Route 111, past the Desert, who gives you an Ability Capsule if you show her a Pokémon with an RNG based ability (such as Flame Body) and an alternative ability, provided it currently has the RNG based ability.
+- Added the Return All Items feature to the Gauntlet menu.
+- Added a quality of life feature that lets you change Shoal Cave's state.
+- Reduced Golisopod's catch rate from 15 to 1.
+- Wild Ultra Beasts now hold Berserk Gene.
+- Improved Morty's and Clair's themes. (Credits to IAGeezus.)
+
+## Version 1.2.4
+
+### Bug fixes
+
+- Fixed Good as Gold blocking Curse from non Ghost type Pokémon.
+- Fixed Dragon Tail's effect working on Mimikyu with Disguise active.
+- Fixed Dark types incorrectly being immune to Struggle from Prankster Pokémon if they had a status move.
+- Fixed eject activation (Emergency Exit and Eject items) incorrectly passing the endure effect.
+- Fixed Stomping Tantrum not being boosted if the previous move missed because the target was in a semi invulnerable state.
+- Fixed Stomping Tantrum remaining boosted for the rest of the battle after activating from a miss, which also caused the AI to overvalue it when evaluating switch ins.
+- Fixed Covert Cloak incorrectly blocking Silk Trap and Obstruct effects if the triggering move would be blocked by Covert Cloak.
+- Fixed a softlock occurring when viewing an Egg summary screen.
+- Fixed Defog being used by the target instead when they are behind a Substitute while Reflect or Light Screen is active.
+- Fixed Tera Starstorm not being boosted by Sheer Force, which also caused Covert Cloak and Shield Dust to fail to block its effect.
+- Fixed Supersweet Syrup and Illuminate incorrectly activating Adrenaline Orb.
+- Fixed a visual bug with Tar Shot displaying a failure message when the target was already affected by Tar Shot but its Speed could still be lowered.
+- Fixed Wallace's Diancie's Mega Evolution not cancelling multihit moves as intended.
+- Fixed Binding Move score stacking with HDM.
+- Fixed Echoed Voice and similar moves not resetting their stack boost after a flinch and similar interruptions.
+- Fixed the Quality of Life menu missing the Air Slash and Signal Beam tutors.
+- Fixed Last Resort not working properly when previous moves were interrupted before being used).
+- Fixed Struggle recoil not using standard rounding.
+- Fixed the AI incorrectly applying Technician to a boosted Payback.
+- Fixed Mortal Spin's spinning effect activating even when hitting an immune target.
+- Fixed Focus Sash reactivating after being consumed by Future Sight.
+- Fixed Zoom Lens activating if the original target switched out using a pivot move.
+- Fixed Fling effects not activating if the target's held item activated during the attack (e.g. Focus Sash, Colbur Berry).
+- Fixed Teatime not affecting certain Pokémon in double battles depending on their position.
+- Fixed Wandering Spirit not transferring if Pursuit hit a Pokémon using a pivot move.
+- Fixed Wandering Spirit incorrectly working on Protosynthesis and Quark Drive.
+- Fixed Sleep Talk and Snore not properly reducing sleep turns when switching out.
+- Fixed contact draining moves (Draining Kiss and Drain Punch) being able to heal through Spiky Shield.
+- Fixed Gulp Missile damage incorrectly corrupting the healing amount of moves such as Giga Drain.
+- Fixed Salac Berry and similar effects triggering their animation without properly applying the Speed boost, instead causing the opponent to receive the boost.
+- Fixed Life Orb recoil not happening when a move hits but deals no damage (e.g. due to Endure or Ice Face).
+- Fixed Jaboca Berry and similar effects not activating when breaking Eiscue's Ice Face.
+- Fixed Cotton Down incorrectly ending multihit moves when the target's Speed could not be lowered further.
+- Fixed Pursuit causing the game to crash when targeting a Pokémon with Cotton Down that attempts to switch out.
+- Fixed a crash when the Player used Me First and the AI is considering Mirror Move.
+- Fixed a crash in the Player PC when withdrawing a Berry.
+- Fixed Fling incorrectly using the held TM's base power when a Pokémon holding a TM used Fling.
+- Fixed Matcha Gotcha not thawing a frozen target.
+- Fixed Flare Blitz being able to burn a target after thawing it.
+- Fixed Perish Body not activating when the Pokémon was KO'd.
+
 ### AI fixes
 
-- Fixed the AI being able to see the player's remaining PP. The AI can still see its own PP.
+- Fixed AI being able to see the player's remaining PP. (The AI can still see its own PP.)
 - Fixed AI sometimes being able to use OHKO moves against targets with Focus Band.
-- Fixed AI seeing the full damage of Rollout and similar moves on the first turn and while evaluating switches.
+- Fixed AI seeing the full damage of Rollout and similar moves on the first turn and when evaluating switches.
 - Fixed AI applying Technician to every hit of Fury Cutter and similar moves.
 - Fixed AI applying the wrong score to Order Up and OHKO moves.
-- Fixed AI using Mirror Move and Copycat on the first turn or when no move can yet be copied.
+- Fixed AI using Mirror Move and Copycat on the first turn and when no move can be copied yet.
 - Fixed AI using Entrainment against a target holding an Ability Shield.
-- Fixed AI sometimes seeing Last Resort damage while evaluating switch-ins.
+- Fixed AI sometimes seeing Last Resort damage when evaluating switch ins.
 - Fixed AI being able to use Memento when it was down to its last Pokémon.
 - Fixed AI incorrectly seeing the Stakeout boost after a pivot move KO.
-- Fixed AI using damaging setup moves like Power-Up Punch even when the player is slower and guaranteed to KO.
-- Fixed AI not using semi-invulnerable moves if it incorrectly expected to die from sandstorm or hail chip.
-- Fixed AI not accounting for Ability suppression on defensive Abilities like Marvel Scale and Fur Coat.
+- Fixed AI using damaging setup moves like Power-Up Punch despite the player being slower and guaranteeing a KO.
+- Fixed AI not using semi invulnerable moves if it incorrectly expected to die to sandstorm or hail chip.
+- Fixed AI not accounting for Ability suppression on certain defensive Abilities, such as Marvel Scale and Fur Coat.
 - Fixed AI incorrectly applying a score penalty to Ditto during switch-in evaluation when it could be fast KO'd.
-- Fixed AI treating the next switch-in as though its Ability were disabled after a Pokémon fainted under Gastro Acid.
-- Fixed AI calculating moves like Endeavor and Counter as dealing 1 damage and other minor evaluation inconsistencies.
-- Fixed AI using Swords Dance with Mimikyu while Disguise is intact, even when the opponent has a discouraging move like Haze.
+- Fixed AI treating the next switch in as if its Ability were disabled after a Pokémon fainted under the effect of Gastro Acid.
+- Fixed AI calculating moves like Endeavor and Counter as dealing 1 damage, along with other minor inconsistencies when evaluating these moves.
+- Fixed AI using Swords Dance with Mimikyu while Disguise is intact, even when the opponent has a move that discourages setup, such as Haze.
 - Fixed Counter Tailwind AI activating after the player's Tailwind had already ended.
 - Removed Truant AI because it was buggy.
 
@@ -40,123 +163,40 @@ This page records notable changes, fixes, and balance updates for Pokémon Null.
 
 ### Balance
 
-- Poison Fang base power: 50 → 65.
-- Zippy Zap PP: 10 → 1.
-- Silk Trap PP: 5 → 1.
-- Drampa ability changes were adjusted, and several learnsets were improved for a number of Pokémon, including Luxray, Delcatty, Persian, Masquerain, Raichu-Alola, Boltund, Eldegoss, Drampa, Armaldo, Amoonguss, Rapidash-Galar, and Swanna.
-- Leavanny's Sharpness variants were slightly weakened, while its Leaf Guard variants were improved.
-- Delphox now learns Mist Ball instead of Recycle via Heart Scale and Luster Purge at level 100, with corresponding compensation for Greninja and Chesnaught.
-- Lucky Chant, Psychic Noise, Counter, and Mirror Coat were added to the learnsets of some Pokémon.
-- Several additional learnset adjustments were made for consistency, move repeats, accuracy, and to replace level-up moves already available via tutors.
-- Cooltrainer Marcel's Hitmontop now holds a Coba Berry instead of a Muscle Band.
-- The levels of several trainer Pokémon were reduced by 1.
-- Several trainer teams and encounters received minor revisions, including a few Root Academy move-set changes, encounter adjustments in Fiery Path and Rustboro Grove, Purrloin additions, and Slowpoke evolution changes.
+- Poison Fang BP: 50 -> 65 to make early Boltund and Drapion better.
+- Zippy Zap PP: 10 PP -> 1 PP, Silk Trap PP: 5 PP -> 1 PP.
+- Drampa Ability: Berserk -> Thick Fat, Hidden Ability: Sap Sipper -> Berserk, Stunfisk Ability: Limber / Sand Veil -> Own Tempo.
+- Improved the learnsets of the following Pokémon: Luxray, Delcatty, Persian, Masquerain, Raichu-Alola, Boltund, Eldegoss, Drampa, Armaldo, Amoonguss, Rapidash-Galar, and Swanna. These changes provide small buffs without significantly altering their power level.
+- Changed Leavanny's moveset to make its Sharpness variants slightly weaker and its Leaf Guard variants slightly better.
+- Delphox now gets Mist Ball instead of Recycle via Heart Scale and Luster Purge at Level 100, to add synergy with Serene Grace Mega Delphox. As compensation, Greninja and Chesnaught also received respectively Storm Throw and Horn Leech at Level 100.
+- Added Lucky Chant, Psychic Noise, Counter and Mirror Coat to the learnsets of some Pokémon, as these moves were previously underrepresented.
+- Made a few additional learnset adjustments for consistency, move repeats, vanilla accuracy, and to replace level up moves that were already available via tutors. (For example, Obstagoon now learns Return via TM, Coalossal now learns Lucky Chant instead of Rock Slide at Level 58.)
+- Cooltrainer Marcel's Hitmontop now holds a Coba Berry instead of a Muscle Band to compensate for a miscalculation involving the interaction between Quick Draw and Mega Evolution.
+- Reduced the levels of the following Pokémon by 1: Breeder Tommy's Zangoose, Land Cave Elite Grunt's Nidoqueen, School Kid Mewttin's Goodra and MHO Grunt Zeldest's Yveltal.
+- As compensation for these nerfs, a few minor changes have been made starting from Steven Split. Most notably, Shelly's Ceruledge in SFC now holds a Colbur Berry instead of Heavy-Duty Boots and Juan's Iron Bundle now has Terrain Pulse instead of Flip Turn.
+- Roxanne's Aerodactyl now has a Special Attack IV of 4 to slightly improve Armaldos matchup against it.
+- Lady Cindy's Delcatty now has Snore and Twins Gina&Mia's Leafeon now has Absorb. These changes eliminate them as Support Pokémon.
+- Reshiram in MHO now has Minimize instead of Double Team to enable Dragon Rush strategies.
+- Moveset nerfs for the following Pokémon in Root Academy: Wooloo, Clamperl, Rockruff, Hatenna, Flabébé.
+- Added a Rock Smash encounter in Fiery Path to give Nuzlocke players an option to avoid encountering Heatmor. The following Pokémon can now be encountered: Magmortar, and Electivire, Lycanroc-Day, Ampharos, Pyroar.
+- Added Water encounters to Rustboro Grove to give the option to opt out from a high variance table.
+- Added Purrloin to Rustboro Grove and instead made Luxio slightly rarer.
+- Zippy Zap is now exclusive to Pichu. Rustboro Grove's Pikachu has been replaced with Pichu to prevent early access via Mauville City Pikachu.
+- Slowpoke now evolves randomly into Slowbro or Slowking. The movesets of both Slowbro and Slowking have been adjusted accordingly.
 
-### Item and encounter updates
+### Items
 
 - Wild Bergmite now hold Ice Stone.
 - Wild Gulpin and Swalot now hold Iapapa Berry.
 - Wild Skitty and Delcatty now hold King's Rock.
 - Wild Glameow and Purugly now hold Adrenaline Orb.
 - Slowbroite is now available in Mossdeep Gym instead of Route 134.
-- A Rock Smash encounter was added in Fiery Path.
-- Added Water encounters to Rustboro Grove.
-- Added Purrloin to Rustboro Grove and reduced Luxio's appearance rate.
-- Zippy Zap is now exclusive to Pichu, and Rustboro Grove's Pikachu was replaced with Pichu.
-- Slowpoke now evolves randomly into Slowbro or Slowking.
 
-### Other changes
+### Other
 
-- Replaced Experts Ronald and Makayla with Tourists Morty and Clair.
-- Added Courtney and Zinnia cutscenes on Route 111 and Sky Pillar.
+- Replaced Experts Ronald and Makayla with Tourists Morty and Clair for a more climactic experience. Their teams remain unchanged.
+- Added Courtney and Zinnia cutscenes on Route 111 and in Sky Pillar, respectively.
 - Added the Return All Items feature to the Misc Menu.
-
-## Version 1.2.5
-
-### Bugs
-
-- Fixed several issues with berries that apply stat changes.
-- Fixed Silk Trap, Obstruct, Burning Bulwark, Mat Block, and Crafty Shield incorrectly blocking status moves.
-- Fixed Covert Cloak not working against abilities and items that add additional effects, such as King's Rock and Poison Point.
-
-## Version 1.2.4
-
-### Bug fixes
-
-- Fixed Good as Gold blocking Curse from non-Ghost-type Pokémon.
-- Fixed Dragon Tail's effect on Mimikyu with Disguise active.
-- Fixed Dark types incorrectly being immune to Struggle from Prankster Pokémon if they had a status move.
-- Fixed eject activation incorrectly passing the endure effect.
-- Fixed Stomping Tantrum not being boosted if the previous move missed because the target was in a semi-invulnerable state.
-- Fixed Stomping Tantrum remaining boosted after activating from a miss.
-- Fixed Covert Cloak incorrectly blocking Silk Trap and Obstruct effects when the triggering move would have otherwise been blocked by Covert Cloak.
-- Fixed a softlock when viewing an Egg summary screen.
-- Fixed Defog being used by the target instead when behind a Substitute while Reflect or Light Screen is active.
-- Fixed Tera Starstorm not being boosted by Sheer Force.
-- Fixed Supersweet Syrup and Illuminate incorrectly activating Adrenaline Orb.
-- Fixed a visual bug with Tar Shot displaying a failure message when the target was already affected.
-- Fixed Wallace's Diancie's Mega Evolution not cancelling multihit moves as intended.
-- Fixed Binding Move score stacking with HDM.
-- Fixed Echoed Voice and similar moves not resetting their stack boost after a flinch.
-- Fixed Last Resort not working properly when previous moves were interrupted before being used.
-- Fixed Struggle recoil not using standard rounding.
-- Fixed the AI incorrectly applying Technician to a boosted Payback.
-- Fixed Mortal Spin's spinning effect activating even when hitting an immune target.
-- Fixed Focus Sash reactivating after being consumed by Future Sight.
-- Fixed Zoom Lens activating if the original target switched out using a pivot move.
-- Fixed Fling effects not activating if the target's held item activated during the attack.
-- Fixed Teatime not affecting certain Pokémon in double battles depending on position.
-- Fixed Wandering Spirit not transferring if Pursuit hit a Pokémon using a pivot move.
-- Fixed Wandering Spirit incorrectly working on Protosynthesis and Quark Drive.
-- Fixed Sleep Talk and Snore not properly reducing sleep turns when switching out.
-- Fixed contact draining moves being able to heal through Spiky Shield.
-- Fixed Gulp Missile damage incorrectly corrupting healing amounts.
-- Fixed Salac Berry and similar effects triggering their animation without properly applying the Speed boost.
-- Fixed Life Orb recoil not happening when a move hits but deals no damage.
-- Fixed Jaboca Berry and similar effects not activating when breaking Eiscue's Ice Face.
-- Fixed Cotton Down incorrectly ending multihit moves when the target's Speed could not be lowered further.
-- Fixed Pursuit causing a crash when targeting a Pokémon with Cotton Down that attempts to switch out.
-- Fixed a crash when the Player used Me First and the AI was considering Mirror Move.
-- Fixed a crash in the Player PC when withdrawing a Berry.
-- Fixed Fling incorrectly using the held TM's base power when a Pokémon holding a TM used Fling.
-- Fixed Matcha Gotcha not thawing a frozen target.
-- Fixed Flare Blitz being able to burn a target after thawing it.
-- Fixed Perish Body not activating when the Pokémon was KO'd.
-
-### AI fixes
-
-- Fixed AI being able to see the player's remaining PP.
-- Fixed AI sometimes being able to use OHKO moves against targets with Focus Band.
-- Fixed AI seeing the full damage of Rollout and similar moves on the first turn and when evaluating switches.
-- Fixed AI applying Technician to every hit of Fury Cutter and similar moves.
-- Fixed AI applying the wrong score to Order Up and OHKO moves.
-- Fixed AI using Mirror Move and Copycat on the first turn and when no move can yet be copied.
-- Fixed AI using Entrainment against a target holding an Ability Shield.
-- Fixed AI sometimes seeing Last Resort damage when evaluating switch-ins.
-- Fixed AI being able to use Memento when it was down to its last Pokémon.
-- Fixed AI incorrectly seeing the Stakeout boost after a pivot move KO.
-- Fixed AI using damaging setup moves like Power-Up Punch despite the player being slower and guaranteeing a KO.
-- Fixed AI not using semi-invulnerable moves if it incorrectly expected to die to sandstorm or hail chip.
-- Fixed AI not accounting for Ability suppression on certain defensive Abilities, such as Marvel Scale and Fur Coat.
-- Fixed AI incorrectly applying a score penalty to Ditto during switch-in evaluation when it could be fast KO'd.
-- Fixed AI treating the next switch-in as if its Ability were disabled after a Pokémon fainted under Gastro Acid.
-- Fixed AI calculating moves like Endeavor and Counter as dealing 1 damage, along with other minor inconsistencies.
-- Fixed AI using Swords Dance with Mimikyu while Disguise is intact, even when the opponent has a move that discourages setup, such as Haze.
-- Fixed Counter Tailwind AI activating after the player's Tailwind had already ended.
-
-### AI changes
-
-- Removed Truant AI because it was buggy.
-
-### Balance
-
-- Poison Fang base power: 50 → 65.
-- Zippy Zap PP: 10 → 1.
-- Silk Trap PP: 5 → 1.
-- Drampa's ability and hidden ability were adjusted, and several Pokémon learnsets were improved.
-- Delphox now learns Mist Ball instead of Recycle via Heart Scale and Luster Purge at level 100.
-- Added Lucky Chant, Psychic Noise, Counter, and Mirror Coat to select learnsets.
-- Several additional learnset tweaks were made for consistency and balance.
 
 ## Version 1.2.3
 
