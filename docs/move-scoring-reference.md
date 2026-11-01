@@ -503,7 +503,7 @@ AI understands what move will be copied and applies its AI routine on it
 <a id="sky-attack-freeze-shock-ice-burn"></a>
 #### Sky Attack, Freeze Shock, Ice Burn
 
-* Else -20 Score
+* If move cannot be immediately used: -20 Score
 
 <a id="disable"></a>
 #### Disable
