@@ -12,6 +12,8 @@ When the AI needs to switch in a Pokémon (after a faint or similar event), it c
     * The AI’s first slot evaluates against the player’s first slot
     * The AI’s second slot evaluates against the player’s second slot
 
+    ![Slots](slots.png)
+
 | Score | Condition |
 | --- | --- |
 | +5 | AI's Pokémon is faster than the player's and OHKOs it. | 
